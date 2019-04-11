@@ -55,7 +55,24 @@ function optimise_working_set(𝜶, 𝝈, K, 𝒚; 𝐶::Int32=Int32(1))
     return 𝜶
 end
 
-function stochastic_decomposition_test(𝐶, 𝑀, ACCURACY, l, 𝒚, K, l_test, 𝒚_test, K_test)
+function optimise_working_set_CPU(𝜶, 𝝈, K, 𝒚; 𝐶=1)
+    l = length(𝜶)
+    while true
+        last_𝜶 = copy(𝜶)
+        for i = 1:l
+            𝜇ᵢ = 1 / K[i,i]
+            δᵢ = 𝜇ᵢ * (1 - 𝒚[i] * 𝝈[i])
+            𝜶[i] = 𝜶[i] + δᵢ
+            𝜶[i] < 0 && (𝜶[i] = 0; δᵢ = 0 - last_𝜶[i])
+            𝜶[i] > 𝐶 && (𝜶[i] = 𝐶; δᵢ = 𝐶 - last_𝜶[i])
+            𝝈 .+= δᵢ * 𝒚[i] * K[i,:]
+        end
+        all(isapprox.(last_𝜶, 𝜶; atol=1e-4)) && break
+    end
+    return 𝜶
+end
+
+function stochastic_decomposition_test(𝐶, 𝑀, ACCURACY, l, 𝒚, K, l_test, 𝒚_test, K_test; usecpu=false)
     𝑀_safe = div(𝑀, 4) * 3
     𝑀_rand = 𝑀 - 𝑀_safe
 
@@ -93,7 +110,11 @@ function stochastic_decomposition_test(𝐶, 𝑀, ACCURACY, l, 𝒚, K, l_test,
         working_set_counter[support_vector_idx] .+= 1
         𝜶_subset, 𝝈_subset = 𝜶[support_vector_idx], 𝝈[support_vector_idx]
         𝒚_subset, K_subset = 𝒚[support_vector_idx], K[support_vector_idx,support_vector_idx]
-        𝜶[support_vector_idx] = optimise_working_set(𝜶_subset, 𝝈_subset, K_subset, 𝒚_subset; 𝐶=𝐶)
+        if usecpu
+            𝜶[support_vector_idx] = optimise_working_set_CPU(𝜶_subset, 𝝈_subset, K_subset, 𝒚_subset; 𝐶=𝐶)
+        else
+            𝜶[support_vector_idx] = optimise_working_set(𝜶_subset, 𝝈_subset, K_subset, 𝒚_subset; 𝐶=𝐶)
+        end
 
         𝝈 = K * (𝜶 .* 𝒚)
 
@@ -114,7 +135,7 @@ function stochastic_decomposition_test(𝐶, 𝑀, ACCURACY, l, 𝒚, K, l_test,
     return 𝜶, error_rate, error_rate_test, monitor_kkt_condition(𝜶, 𝝈, 𝒚; 𝐶=𝐶)
 end
 
-function stochastic_decomposition(𝐶, 𝑀, ACCURACY, l, 𝒚, K)
+function stochastic_decomposition(𝐶, 𝑀, ACCURACY, l, 𝒚, K; usecpu=false)
     𝑀_safe = div(𝑀, 4) * 3
     𝑀_rand = 𝑀 - 𝑀_safe
 
@@ -152,8 +173,12 @@ function stochastic_decomposition(𝐶, 𝑀, ACCURACY, l, 𝒚, K)
         working_set_counter[support_vector_idx] .+= 1
         𝜶_subset, 𝝈_subset = 𝜶[support_vector_idx], 𝝈[support_vector_idx]
         𝒚_subset, K_subset = 𝒚[support_vector_idx], K[support_vector_idx,support_vector_idx]
-        𝜶[support_vector_idx] = optimise_working_set(𝜶_subset, 𝝈_subset, K_subset, 𝒚_subset; 𝐶=𝐶)
-
+        if usecpu
+            println("using CPU")
+            𝜶[support_vector_idx] = optimise_working_set_CPU(𝜶_subset, 𝝈_subset, K_subset, 𝒚_subset; 𝐶=𝐶)
+        else
+            𝜶[support_vector_idx] = optimise_working_set(𝜶_subset, 𝝈_subset, K_subset, 𝒚_subset; 𝐶=𝐶)
+        end
         𝝈 = K * (𝜶 .* 𝒚)
 
         for (i_index,i) in enumerate(support_vector_idx)
