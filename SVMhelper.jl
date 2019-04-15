@@ -64,7 +64,7 @@ function prepare_MNIST_data(class_pos, class_neg, γ)
     𝑋_test = hcat(transpose(reshape(cat(𝑋_neg_test, 𝑋_pos_test; dims=3), 28*28, l_test)), ones(l_test))
     𝒚_test = vcat(𝒚_neg_test, 𝒚_pos_test)
 
-    gaussian_kernel_matrix(𝑋, 𝑋_test, γ) = exp.(- γ * pairwise(SqEuclidean(), Matrix(𝑋_test), Matrix(𝑋), dims=1))  # 𝑋's rows are input tensors.
+    gaussian_kernel_matrix(𝑋, 𝑋_test, γ) = exp.(- γ * pairwise(SqEuclidean(), Matrix(𝑋_test), Matrix(𝑋), dims=1))
     K_test = gaussian_kernel_matrix(𝑋, 𝑋_test, γ)
 
     return (𝑋, 𝒚, K, l), (𝑋_test, 𝒚_test, K_test, l_test)
