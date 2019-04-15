@@ -1,0 +1,1620 @@
+<!DOCTYPE html>
+<HTML lang="en">
+
+<HEAD>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+      TeX: { equationNumbers: { autoNumber: "AMS" } }
+    });
+  </script>
+
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+
+
+    <style>
+        pre.hljl {
+            border: 1px solid #ccc;
+            margin: 5px;
+            padding: 5px;
+            overflow-x: auto;
+            color: rgb(68, 68, 68);
+            background-color: rgb(251, 251, 251);
+        }
+
+        pre.hljl>span.hljl-t {}
+
+        pre.hljl>span.hljl-w {}
+
+        pre.hljl>span.hljl-e {}
+
+        pre.hljl>span.hljl-eB {}
+
+        pre.hljl>span.hljl-o {}
+
+        pre.hljl>span.hljl-k {
+            color: rgb(148, 91, 176);
+            font-weight: bold;
+        }
+
+        pre.hljl>span.hljl-kc {
+            color: rgb(59, 151, 46);
+            font-style: italic;
+        }
+
+        pre.hljl>span.hljl-kd {
+            color: rgb(214, 102, 97);
+            font-style: italic;
+        }
+
+        pre.hljl>span.hljl-kn {
+            color: rgb(148, 91, 176);
+            font-weight: bold;
+        }
+
+        pre.hljl>span.hljl-kp {
+            color: rgb(148, 91, 176);
+            font-weight: bold;
+        }
+
+        pre.hljl>span.hljl-kr {
+            color: rgb(148, 91, 176);
+            font-weight: bold;
+        }
+
+        pre.hljl>span.hljl-kt {
+            color: rgb(148, 91, 176);
+            font-weight: bold;
+        }
+
+        pre.hljl>span.hljl-n {}
+
+        pre.hljl>span.hljl-na {}
+
+        pre.hljl>span.hljl-nb {}
+
+        pre.hljl>span.hljl-nbp {}
+
+        pre.hljl>span.hljl-nc {}
+
+        pre.hljl>span.hljl-ncB {}
+
+        pre.hljl>span.hljl-nd {
+            color: rgb(214, 102, 97);
+        }
+
+        pre.hljl>span.hljl-ne {}
+
+        pre.hljl>span.hljl-neB {}
+
+        pre.hljl>span.hljl-nf {
+            color: rgb(66, 102, 213);
+        }
+
+        pre.hljl>span.hljl-nfm {
+            color: rgb(66, 102, 213);
+        }
+
+        pre.hljl>span.hljl-np {}
+
+        pre.hljl>span.hljl-nl {}
+
+        pre.hljl>span.hljl-nn {}
+
+        pre.hljl>span.hljl-no {}
+
+        pre.hljl>span.hljl-nt {}
+
+        pre.hljl>span.hljl-nv {}
+
+        pre.hljl>span.hljl-nvc {}
+
+        pre.hljl>span.hljl-nvg {}
+
+        pre.hljl>span.hljl-nvi {}
+
+        pre.hljl>span.hljl-nvm {}
+
+        pre.hljl>span.hljl-l {}
+
+        pre.hljl>span.hljl-ld {
+            color: rgb(148, 91, 176);
+            font-style: italic;
+        }
+
+        pre.hljl>span.hljl-s {
+            color: rgb(201, 61, 57);
+        }
+
+        pre.hljl>span.hljl-sa {
+            color: rgb(201, 61, 57);
+        }
+
+        pre.hljl>span.hljl-sb {
+            color: rgb(201, 61, 57);
+        }
+
+        pre.hljl>span.hljl-sc {
+            color: rgb(201, 61, 57);
+        }
+
+        pre.hljl>span.hljl-sd {
+            color: rgb(201, 61, 57);
+        }
+
+        pre.hljl>span.hljl-sdB {
+            color: rgb(201, 61, 57);
+        }
+
+        pre.hljl>span.hljl-sdC {
+            color: rgb(201, 61, 57);
+        }
+
+        pre.hljl>span.hljl-se {
+            color: rgb(59, 151, 46);
+        }
+
+        pre.hljl>span.hljl-sh {
+            color: rgb(201, 61, 57);
+        }
+
+        pre.hljl>span.hljl-si {}
+
+        pre.hljl>span.hljl-so {
+            color: rgb(201, 61, 57);
+        }
+
+        pre.hljl>span.hljl-sr {
+            color: rgb(201, 61, 57);
+        }
+
+        pre.hljl>span.hljl-ss {
+            color: rgb(201, 61, 57);
+        }
+
+        pre.hljl>span.hljl-ssB {
+            color: rgb(201, 61, 57);
+        }
+
+        pre.hljl>span.hljl-nB {
+            color: rgb(59, 151, 46);
+        }
+
+        pre.hljl>span.hljl-nbB {
+            color: rgb(59, 151, 46);
+        }
+
+        pre.hljl>span.hljl-nfB {
+            color: rgb(59, 151, 46);
+        }
+
+        pre.hljl>span.hljl-nh {
+            color: rgb(59, 151, 46);
+        }
+
+        pre.hljl>span.hljl-ni {
+            color: rgb(59, 151, 46);
+        }
+
+        pre.hljl>span.hljl-nil {
+            color: rgb(59, 151, 46);
+        }
+
+        pre.hljl>span.hljl-noB {
+            color: rgb(59, 151, 46);
+        }
+
+        pre.hljl>span.hljl-oB {
+            color: rgb(102, 102, 102);
+            font-weight: bold;
+        }
+
+        pre.hljl>span.hljl-ow {
+            color: rgb(102, 102, 102);
+            font-weight: bold;
+        }
+
+        pre.hljl>span.hljl-p {}
+
+        pre.hljl>span.hljl-c {
+            color: rgb(153, 153, 119);
+            font-style: italic;
+        }
+
+        pre.hljl>span.hljl-ch {
+            color: rgb(153, 153, 119);
+            font-style: italic;
+        }
+
+        pre.hljl>span.hljl-cm {
+            color: rgb(153, 153, 119);
+            font-style: italic;
+        }
+
+        pre.hljl>span.hljl-cp {
+            color: rgb(153, 153, 119);
+            font-style: italic;
+        }
+
+        pre.hljl>span.hljl-cpB {
+            color: rgb(153, 153, 119);
+            font-style: italic;
+        }
+
+        pre.hljl>span.hljl-cs {
+            color: rgb(153, 153, 119);
+            font-style: italic;
+        }
+
+        pre.hljl>span.hljl-csB {
+            color: rgb(153, 153, 119);
+            font-style: italic;
+        }
+
+        pre.hljl>span.hljl-g {}
+
+        pre.hljl>span.hljl-gd {}
+
+        pre.hljl>span.hljl-ge {}
+
+        pre.hljl>span.hljl-geB {}
+
+        pre.hljl>span.hljl-gh {}
+
+        pre.hljl>span.hljl-gi {}
+
+        pre.hljl>span.hljl-go {}
+
+        pre.hljl>span.hljl-gp {}
+
+        pre.hljl>span.hljl-gs {}
+
+        pre.hljl>span.hljl-gsB {}
+
+        pre.hljl>span.hljl-gt {}
+    </style>
+
+
+
+    <style type="text/css">
+        @font-face {
+            font-style: normal;
+            font-weight: 300;
+        }
+
+        @font-face {
+            font-style: normal;
+            font-weight: 400;
+        }
+
+        @font-face {
+            font-style: normal;
+            font-weight: 600;
+        }
+
+        html {
+            font-family: sans-serif;
+            /* 1 */
+            -ms-text-size-adjust: 100%;
+            /* 2 */
+            -webkit-text-size-adjust: 100%;
+            /* 2 */
+        }
+
+        body {
+            margin: 0;
+        }
+
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        main,
+        menu,
+        nav,
+        section,
+        summary {
+            display: block;
+        }
+
+        audio,
+        canvas,
+        progress,
+        video {
+            display: inline-block;
+            /* 1 */
+            vertical-align: baseline;
+            /* 2 */
+        }
+
+        audio:not([controls]) {
+            display: none;
+            height: 0;
+        }
+
+        [hidden],
+        template {
+            display: none;
+        }
+
+        a:active,
+        a:hover {
+            outline: 0;
+        }
+
+        abbr[title] {
+            border-bottom: 1px dotted;
+        }
+
+        b,
+        strong {
+            font-weight: bold;
+        }
+
+        dfn {
+            font-style: italic;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin: 0.67em 0;
+        }
+
+        mark {
+            background: #ff0;
+            color: #000;
+        }
+
+        small {
+            font-size: 80%;
+        }
+
+        sub,
+        sup {
+            font-size: 75%;
+            line-height: 0;
+            position: relative;
+            vertical-align: baseline;
+        }
+
+        sup {
+            top: -0.5em;
+        }
+
+        sub {
+            bottom: -0.25em;
+        }
+
+        img {
+            border: 0;
+        }
+
+        svg:not(:root) {
+            overflow: hidden;
+        }
+
+        figure {
+            margin: 1em 40px;
+        }
+
+        hr {
+            -moz-box-sizing: content-box;
+            box-sizing: content-box;
+            height: 0;
+        }
+
+        pre {
+            overflow: auto;
+        }
+
+        code,
+        kbd,
+        pre,
+        samp {
+            font-family: monospace, monospace;
+            font-size: 1em;
+        }
+
+        button,
+        input,
+        optgroup,
+        select,
+        textarea {
+            color: inherit;
+            /* 1 */
+            font: inherit;
+            /* 2 */
+            margin: 0;
+            /* 3 */
+        }
+
+        button {
+            overflow: visible;
+        }
+
+        button,
+        select {
+            text-transform: none;
+        }
+
+        button,
+        html input[type="button"],
+        /* 1 */
+        input[type="reset"],
+        input[type="submit"] {
+            -webkit-appearance: button;
+            /* 2 */
+            cursor: pointer;
+            /* 3 */
+        }
+
+        button[disabled],
+        html input[disabled] {
+            cursor: default;
+        }
+
+        button::-moz-focus-inner,
+        input::-moz-focus-inner {
+            border: 0;
+            padding: 0;
+        }
+
+        input {
+            line-height: normal;
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            box-sizing: border-box;
+            /* 1 */
+            padding: 0;
+            /* 2 */
+        }
+
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            height: auto;
+        }
+
+        input[type="search"] {
+            -webkit-appearance: textfield;
+            /* 1 */
+            -moz-box-sizing: content-box;
+            -webkit-box-sizing: content-box;
+            /* 2 */
+            box-sizing: content-box;
+        }
+
+        input[type="search"]::-webkit-search-cancel-button,
+        input[type="search"]::-webkit-search-decoration {
+            -webkit-appearance: none;
+        }
+
+        fieldset {
+            border: 1px solid #c0c0c0;
+            margin: 0 2px;
+            padding: 0.35em 0.625em 0.75em;
+        }
+
+        legend {
+            border: 0;
+            /* 1 */
+            padding: 0;
+            /* 2 */
+        }
+
+        textarea {
+            overflow: auto;
+        }
+
+        optgroup {
+            font-weight: bold;
+        }
+
+        table {
+            font-family: monospace, monospace;
+            font-size: 0.8em;
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        td,
+        th {
+            padding: 0;
+        }
+
+        thead th {
+            border-bottom: 1px solid black;
+            background-color: white;
+        }
+
+        tr:nth-child(odd) {
+            background-color: rgb(248, 248, 248);
+        }
+
+
+        /*
+* Skeleton V2.0.4
+* Copyright 2014, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 12/29/2014
+*/
+        .container {
+            position: relative;
+            width: 100%;
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+
+        .column,
+        .columns {
+            width: 100%;
+            float: left;
+            box-sizing: border-box;
+        }
+
+        @media (min-width: 400px) {
+            .container {
+                width: 85%;
+                padding: 0;
+            }
+        }
+
+        @media (min-width: 550px) {
+            .container {
+                width: 80%;
+            }
+
+            .column,
+            .columns {
+                margin-left: 4%;
+            }
+
+            .column:first-child,
+            .columns:first-child {
+                margin-left: 0;
+            }
+
+            .one.column,
+            .one.columns {
+                width: 4.66666666667%;
+            }
+
+            .two.columns {
+                width: 13.3333333333%;
+            }
+
+            .three.columns {
+                width: 22%;
+            }
+
+            .four.columns {
+                width: 30.6666666667%;
+            }
+
+            .five.columns {
+                width: 39.3333333333%;
+            }
+
+            .six.columns {
+                width: 48%;
+            }
+
+            .seven.columns {
+                width: 56.6666666667%;
+            }
+
+            .eight.columns {
+                width: 65.3333333333%;
+            }
+
+            .nine.columns {
+                width: 74.0%;
+            }
+
+            .ten.columns {
+                width: 82.6666666667%;
+            }
+
+            .eleven.columns {
+                width: 91.3333333333%;
+            }
+
+            .twelve.columns {
+                width: 100%;
+                margin-left: 0;
+            }
+
+            .one-third.column {
+                width: 30.6666666667%;
+            }
+
+            .two-thirds.column {
+                width: 65.3333333333%;
+            }
+
+            .one-half.column {
+                width: 48%;
+            }
+
+            /* Offsets */
+            .offset-by-one.column,
+            .offset-by-one.columns {
+                margin-left: 8.66666666667%;
+            }
+
+            .offset-by-two.column,
+            .offset-by-two.columns {
+                margin-left: 17.3333333333%;
+            }
+
+            .offset-by-three.column,
+            .offset-by-three.columns {
+                margin-left: 26%;
+            }
+
+            .offset-by-four.column,
+            .offset-by-four.columns {
+                margin-left: 34.6666666667%;
+            }
+
+            .offset-by-five.column,
+            .offset-by-five.columns {
+                margin-left: 43.3333333333%;
+            }
+
+            .offset-by-six.column,
+            .offset-by-six.columns {
+                margin-left: 52%;
+            }
+
+            .offset-by-seven.column,
+            .offset-by-seven.columns {
+                margin-left: 60.6666666667%;
+            }
+
+            .offset-by-eight.column,
+            .offset-by-eight.columns {
+                margin-left: 69.3333333333%;
+            }
+
+            .offset-by-nine.column,
+            .offset-by-nine.columns {
+                margin-left: 78.0%;
+            }
+
+            .offset-by-ten.column,
+            .offset-by-ten.columns {
+                margin-left: 86.6666666667%;
+            }
+
+            .offset-by-eleven.column,
+            .offset-by-eleven.columns {
+                margin-left: 95.3333333333%;
+            }
+
+            .offset-by-one-third.column,
+            .offset-by-one-third.columns {
+                margin-left: 34.6666666667%;
+            }
+
+            .offset-by-two-thirds.column,
+            .offset-by-two-thirds.columns {
+                margin-left: 69.3333333333%;
+            }
+
+            .offset-by-one-half.column,
+            .offset-by-one-half.columns {
+                margin-left: 52%;
+            }
+
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        body {
+            font-size: 1.5em;
+            /* currently ems cause chrome bug misinterpreting rems on body element */
+            line-height: 1.6;
+            font-weight: 400;
+            font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            color: #222;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin-top: 0;
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+
+        h1 {
+            font-size: 3.6rem;
+            line-height: 1.2;
+            letter-spacing: -.1rem;
+        }
+
+        h2 {
+            font-size: 3.4rem;
+            line-height: 1.25;
+            letter-spacing: -.1rem;
+        }
+
+        h3 {
+            font-size: 3.2rem;
+            line-height: 1.3;
+            letter-spacing: -.1rem;
+        }
+
+        h4 {
+            font-size: 2.8rem;
+            line-height: 1.35;
+            letter-spacing: -.08rem;
+        }
+
+        h5 {
+            font-size: 2.4rem;
+            line-height: 1.5;
+            letter-spacing: -.05rem;
+        }
+
+        h6 {
+            font-size: 1.5rem;
+            line-height: 1.6;
+            letter-spacing: 0;
+        }
+
+        p {
+            margin-top: 0;
+        }
+
+        a {
+            color: #1EAEDB;
+        }
+
+        a:hover {
+            color: #0FA0CE;
+        }
+
+        .button,
+        button,
+        input[type="submit"],
+        input[type="reset"],
+        input[type="button"] {
+            display: inline-block;
+            height: 38px;
+            padding: 0 30px;
+            color: #555;
+            text-align: center;
+            font-size: 11px;
+            font-weight: 600;
+            line-height: 38px;
+            letter-spacing: .1rem;
+            text-transform: uppercase;
+            text-decoration: none;
+            white-space: nowrap;
+            background-color: transparent;
+            border-radius: 4px;
+            border: 1px solid #bbb;
+            cursor: pointer;
+            box-sizing: border-box;
+        }
+
+        .button:hover,
+        button:hover,
+        input[type="submit"]:hover,
+        input[type="reset"]:hover,
+        input[type="button"]:hover,
+        .button:focus,
+        button:focus,
+        input[type="submit"]:focus,
+        input[type="reset"]:focus,
+        input[type="button"]:focus {
+            color: #333;
+            border-color: #888;
+            outline: 0;
+        }
+
+        .button.button-primary,
+        button.button-primary,
+        input[type="submit"].button-primary,
+        input[type="reset"].button-primary,
+        input[type="button"].button-primary {
+            color: #FFF;
+            background-color: #33C3F0;
+            border-color: #33C3F0;
+        }
+
+        .button.button-primary:hover,
+        button.button-primary:hover,
+        input[type="submit"].button-primary:hover,
+        input[type="reset"].button-primary:hover,
+        input[type="button"].button-primary:hover,
+        .button.button-primary:focus,
+        button.button-primary:focus,
+        input[type="submit"].button-primary:focus,
+        input[type="reset"].button-primary:focus,
+        input[type="button"].button-primary:focus {
+            color: #FFF;
+            background-color: #1EAEDB;
+            border-color: #1EAEDB;
+        }
+
+        input[type="email"],
+        input[type="number"],
+        input[type="search"],
+        input[type="text"],
+        input[type="tel"],
+        input[type="url"],
+        input[type="password"],
+        textarea,
+        select {
+            height: 38px;
+            padding: 6px 10px;
+            /* The 6px vertically centers text on FF, ignored by Webkit */
+            background-color: #fff;
+            border: 1px solid #D1D1D1;
+            border-radius: 4px;
+            box-shadow: none;
+            box-sizing: border-box;
+        }
+
+        /* Removes awkward default styles on some inputs for iOS */
+        input[type="email"],
+        input[type="number"],
+        input[type="search"],
+        input[type="text"],
+        input[type="tel"],
+        input[type="url"],
+        input[type="password"],
+        textarea {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+
+        textarea {
+            min-height: 65px;
+            padding-top: 6px;
+            padding-bottom: 6px;
+        }
+
+        input[type="email"]:focus,
+        input[type="number"]:focus,
+        input[type="search"]:focus,
+        input[type="text"]:focus,
+        input[type="tel"]:focus,
+        input[type="url"]:focus,
+        input[type="password"]:focus,
+        textarea:focus,
+        select:focus {
+            border: 1px solid #33C3F0;
+            outline: 0;
+        }
+
+        label,
+        legend {
+            display: block;
+            margin-bottom: .5rem;
+            font-weight: 600;
+        }
+
+        fieldset {
+            padding: 0;
+            border-width: 0;
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            display: inline;
+        }
+
+        label>.label-body {
+            display: inline-block;
+            margin-left: .5rem;
+            font-weight: normal;
+        }
+
+        ul {
+            list-style: circle;
+        }
+
+        ol {
+            list-style: decimal;
+        }
+
+        ul ul,
+        ul ol,
+        ol ol,
+        ol ul {
+            margin: 1.5rem 0 1.5rem 3rem;
+            font-size: 90%;
+        }
+
+        li>p {
+            margin: 0;
+        }
+
+        th,
+        td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #E1E1E1;
+        }
+
+        th:first-child,
+        td:first-child {
+            padding-left: 0;
+        }
+
+        th:last-child,
+        td:last-child {
+            padding-right: 0;
+        }
+
+        button,
+        .button {
+            margin-bottom: 1rem;
+        }
+
+        input,
+        textarea,
+        select,
+        fieldset {
+            margin-bottom: 1.5rem;
+        }
+
+        pre,
+        blockquote,
+        dl,
+        figure,
+        table,
+        p,
+        ul,
+        ol,
+        form {
+            margin-bottom: 1.0rem;
+        }
+
+        .u-full-width {
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .u-max-full-width {
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .u-pull-right {
+            float: right;
+        }
+
+        .u-pull-left {
+            float: left;
+        }
+
+        hr {
+            margin-top: 3rem;
+            margin-bottom: 3.5rem;
+            border-width: 0;
+            border-top: 1px solid #E1E1E1;
+        }
+
+        .container:after,
+        .row:after,
+        .u-cf {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        pre {
+            display: block;
+            padding: 9.5px;
+            margin: 0 0 10px;
+            font-size: 13px;
+            line-height: 1.42857143;
+            word-break: break-all;
+            word-wrap: break-word;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        pre.hljl {
+            margin: 0 0 10px;
+            display: block;
+            background: #f5f5f5;
+            border-radius: 4px;
+            padding: 5px;
+        }
+
+        pre.output {
+            background: #ffffff;
+        }
+
+        pre.code {
+            background: #ffffff;
+        }
+
+        pre.julia-error {
+            color: red
+        }
+
+        code,
+        kbd,
+        pre,
+        samp {
+            font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+            font-size: 13px;
+        }
+
+
+        @media (min-width: 400px) {}
+
+        @media (min-width: 550px) {}
+
+        @media (min-width: 750px) {}
+
+        @media (min-width: 1000px) {}
+
+        @media (min-width: 1200px) {}
+
+        h1.title {
+            margin-top: 20px
+        }
+
+        img {
+            max-width: 100%
+        }
+
+        div.title {
+            text-align: center;
+        }
+    </style>
+
+
+
+</HEAD>
+
+<BODY>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 twelve columns">
+
+                <div class="title">
+
+
+
+                </div>
+
+                <h1>Julia SVM Helper Functions</h1>
+
+
+                <pre class='hljl'>
+<span class='hljl-cs'>##############################</span><span class='hljl-t'>
+</span><span class='hljl-cs'>## by Qin Yu, Feb 2019</span><span class='hljl-t'>
+</span><span class='hljl-cs'>## using Julia 1.0.3</span><span class='hljl-t'>
+</span><span class='hljl-cs'>##############################</span><span class='hljl-t'>
+
+</span><span class='hljl-nf'>gaussian_kernel_matrix</span><span class='hljl-p'>(</span><span class='hljl-n'>𝑋</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>γ</span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'>  </span><span class='hljl-cs'># 𝑋&#39;s rows are input tensors.</span><span class='hljl-t'>
+    </span><span class='hljl-n'>exp</span><span class='hljl-oB'>.</span><span class='hljl-p'>(</span><span class='hljl-oB'>-</span><span class='hljl-t'> </span><span class='hljl-n'>γ</span><span class='hljl-t'> </span><span class='hljl-oB'>*</span><span class='hljl-t'> </span><span class='hljl-nf'>pairwise</span><span class='hljl-p'>(</span><span class='hljl-nf'>SqEuclidean</span><span class='hljl-p'>(),</span><span class='hljl-t'> </span><span class='hljl-nf'>Matrix</span><span class='hljl-p'>(</span><span class='hljl-n'>𝑋</span><span class='hljl-p'>),</span><span class='hljl-t'> </span><span class='hljl-n'>dims</span><span class='hljl-oB'>=</span><span class='hljl-ni'>1</span><span class='hljl-p'>))</span><span class='hljl-t'>
+</span><span class='hljl-nf'>gaussian_kernel_matrix</span><span class='hljl-p'>(</span><span class='hljl-n'>𝑋</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝑋_test</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>γ</span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'>  </span><span class='hljl-cs'># 𝑋&#39;s rows are input tensors.</span><span class='hljl-t'>
+    </span><span class='hljl-n'>exp</span><span class='hljl-oB'>.</span><span class='hljl-p'>(</span><span class='hljl-oB'>-</span><span class='hljl-t'> </span><span class='hljl-n'>γ</span><span class='hljl-t'> </span><span class='hljl-oB'>*</span><span class='hljl-t'> </span><span class='hljl-nf'>pairwise</span><span class='hljl-p'>(</span><span class='hljl-nf'>SqEuclidean</span><span class='hljl-p'>(),</span><span class='hljl-t'> </span><span class='hljl-nf'>Matrix</span><span class='hljl-p'>(</span><span class='hljl-n'>𝑋_test</span><span class='hljl-p'>),</span><span class='hljl-t'> </span><span class='hljl-nf'>Matrix</span><span class='hljl-p'>(</span><span class='hljl-n'>𝑋</span><span class='hljl-p'>),</span><span class='hljl-t'> </span><span class='hljl-n'>dims</span><span class='hljl-oB'>=</span><span class='hljl-ni'>1</span><span class='hljl-p'>))</span><span class='hljl-t'>
+
+</span><span class='hljl-k'>function</span><span class='hljl-t'> </span><span class='hljl-nf'>extract_each_classes</span><span class='hljl-p'>(</span><span class='hljl-n'>𝑋_ALL</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝒚_ALL</span><span class='hljl-p'>)</span><span class='hljl-t'>
+    </span><span class='hljl-n'>CLASSES</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>sort</span><span class='hljl-p'>(</span><span class='hljl-nf'>unique</span><span class='hljl-p'>(</span><span class='hljl-n'>𝒚_ALL</span><span class='hljl-p'>))</span><span class='hljl-t'>
+    </span><span class='hljl-n'>NO_OF_CLASSES</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>length</span><span class='hljl-p'>(</span><span class='hljl-n'>CLASSES</span><span class='hljl-p'>)</span><span class='hljl-t'>
+    </span><span class='hljl-n'>L</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-p'>[</span><span class='hljl-nf'>sum</span><span class='hljl-p'>(</span><span class='hljl-n'>𝒚_ALL</span><span class='hljl-t'> </span><span class='hljl-oB'>.==</span><span class='hljl-t'> </span><span class='hljl-n'>class</span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-k'>for</span><span class='hljl-t'> </span><span class='hljl-n'>class</span><span class='hljl-t'> </span><span class='hljl-kp'>in</span><span class='hljl-t'> </span><span class='hljl-n'>CLASSES</span><span class='hljl-p'>]</span><span class='hljl-t'>
+    </span><span class='hljl-n'>𝑋_EACH_train</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-p'>[</span><span class='hljl-n'>𝑋_ALL</span><span class='hljl-p'>[</span><span class='hljl-oB'>:</span><span class='hljl-p'>,</span><span class='hljl-oB'>:</span><span class='hljl-p'>,</span><span class='hljl-n'>𝒚_ALL</span><span class='hljl-t'> </span><span class='hljl-oB'>.==</span><span class='hljl-t'> </span><span class='hljl-n'>class</span><span class='hljl-p'>]</span><span class='hljl-t'> </span><span class='hljl-k'>for</span><span class='hljl-t'> </span><span class='hljl-n'>class</span><span class='hljl-t'> </span><span class='hljl-kp'>in</span><span class='hljl-t'> </span><span class='hljl-n'>CLASSES</span><span class='hljl-p'>]</span><span class='hljl-t'>
+    </span><span class='hljl-n'>𝑋s</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-p'>[</span><span class='hljl-nf'>hcat</span><span class='hljl-p'>(</span><span class='hljl-nf'>transpose</span><span class='hljl-p'>(</span><span class='hljl-nf'>reshape</span><span class='hljl-p'>(</span><span class='hljl-n'>𝑋_EACH_train</span><span class='hljl-p'>[</span><span class='hljl-n'>i</span><span class='hljl-p'>],</span><span class='hljl-t'> </span><span class='hljl-ni'>28</span><span class='hljl-oB'>*</span><span class='hljl-ni'>28</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>L</span><span class='hljl-p'>[</span><span class='hljl-n'>i</span><span class='hljl-p'>])),</span><span class='hljl-t'> </span><span class='hljl-nf'>ones</span><span class='hljl-p'>(</span><span class='hljl-n'>L</span><span class='hljl-p'>[</span><span class='hljl-n'>i</span><span class='hljl-p'>]))</span><span class='hljl-t'> </span><span class='hljl-k'>for</span><span class='hljl-t'> </span><span class='hljl-n'>i</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-oB'>:</span><span class='hljl-n'>NO_OF_CLASSES</span><span class='hljl-p'>]</span><span class='hljl-t'>
+    </span><span class='hljl-n'>𝒚s</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>ones</span><span class='hljl-oB'>.</span><span class='hljl-p'>(</span><span class='hljl-n'>Int</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>L</span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-oB'>.*</span><span class='hljl-t'> </span><span class='hljl-n'>CLASSES</span><span class='hljl-t'>
+    </span><span class='hljl-k'>return</span><span class='hljl-t'> </span><span class='hljl-n'>L</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝑋s</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝒚s</span><span class='hljl-t'>
+</span><span class='hljl-k'>end</span><span class='hljl-t'>
+
+</span><span class='hljl-k'>function</span><span class='hljl-t'> </span><span class='hljl-nf'>extract_all_test</span><span class='hljl-p'>(</span><span class='hljl-n'>𝑋_ALL</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝒚_ALL</span><span class='hljl-p'>)</span><span class='hljl-t'>
+    </span><span class='hljl-n'>𝑋s</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>hcat</span><span class='hljl-p'>(</span><span class='hljl-nf'>transpose</span><span class='hljl-p'>(</span><span class='hljl-nf'>reshape</span><span class='hljl-p'>(</span><span class='hljl-n'>𝑋_ALL</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>28</span><span class='hljl-oB'>*</span><span class='hljl-ni'>28</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-oB'>:</span><span class='hljl-p'>)),</span><span class='hljl-t'> </span><span class='hljl-nf'>ones</span><span class='hljl-p'>(</span><span class='hljl-nf'>size</span><span class='hljl-p'>(</span><span class='hljl-n'>𝑋_ALL</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>3</span><span class='hljl-p'>)))</span><span class='hljl-t'>
+    </span><span class='hljl-k'>return</span><span class='hljl-t'> </span><span class='hljl-n'>𝑋s</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝒚_ALL</span><span class='hljl-t'>
+</span><span class='hljl-k'>end</span><span class='hljl-t'>
+
+</span><span class='hljl-k'>function</span><span class='hljl-t'> </span><span class='hljl-nf'>prepare_one_vs_rest</span><span class='hljl-p'>(</span><span class='hljl-n'>𝑋_ALL</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝒚_ALL</span><span class='hljl-p'>)</span><span class='hljl-t'>
+    </span><span class='hljl-n'>𝑋</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>hcat</span><span class='hljl-p'>(</span><span class='hljl-nf'>transpose</span><span class='hljl-p'>(</span><span class='hljl-nf'>reshape</span><span class='hljl-p'>(</span><span class='hljl-n'>𝑋_ALL</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>28</span><span class='hljl-oB'>*</span><span class='hljl-ni'>28</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-oB'>:</span><span class='hljl-p'>)),</span><span class='hljl-t'> </span><span class='hljl-nf'>ones</span><span class='hljl-p'>(</span><span class='hljl-nf'>size</span><span class='hljl-p'>(</span><span class='hljl-n'>𝑋_ALL</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>3</span><span class='hljl-p'>)))</span><span class='hljl-t'>
+    </span><span class='hljl-n'>𝒚s</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-p'>[(</span><span class='hljl-n'>y</span><span class='hljl-t'> </span><span class='hljl-oB'>-&gt;</span><span class='hljl-t'> </span><span class='hljl-n'>y</span><span class='hljl-t'> </span><span class='hljl-oB'>==</span><span class='hljl-t'> </span><span class='hljl-n'>pos_label</span><span class='hljl-t'> </span><span class='hljl-oB'>?</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-t'> </span><span class='hljl-oB'>:</span><span class='hljl-t'> </span><span class='hljl-oB'>-</span><span class='hljl-ni'>1</span><span class='hljl-p'>)</span><span class='hljl-oB'>.</span><span class='hljl-p'>(</span><span class='hljl-n'>𝒚_ALL</span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-k'>for</span><span class='hljl-t'> </span><span class='hljl-n'>pos_label</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-ni'>0</span><span class='hljl-oB'>:</span><span class='hljl-ni'>9</span><span class='hljl-p'>]</span><span class='hljl-t'>
+    </span><span class='hljl-k'>return</span><span class='hljl-t'> </span><span class='hljl-n'>𝑋</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝒚s</span><span class='hljl-t'>
+</span><span class='hljl-k'>end</span><span class='hljl-t'>
+
+</span><span class='hljl-k'>function</span><span class='hljl-t'> </span><span class='hljl-nf'>prepare_MNIST_data</span><span class='hljl-p'>(</span><span class='hljl-n'>class_pos</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>class_neg</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>γ</span><span class='hljl-p'>)</span><span class='hljl-t'>
+    </span><span class='hljl-cs'># Load train data</span><span class='hljl-t'>
+    </span><span class='hljl-n'>𝑋_ALL_train</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝒚_ALL_train</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>MNIST</span><span class='hljl-oB'>.</span><span class='hljl-nf'>traindata</span><span class='hljl-p'>(</span><span class='hljl-n'>Float32</span><span class='hljl-p'>)</span><span class='hljl-t'>
+
+    </span><span class='hljl-n'>NO_OF_NEGATIVE</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>sum</span><span class='hljl-p'>(</span><span class='hljl-n'>𝒚_ALL_train</span><span class='hljl-t'> </span><span class='hljl-oB'>.==</span><span class='hljl-t'> </span><span class='hljl-n'>class_neg</span><span class='hljl-p'>)</span><span class='hljl-t'>
+    </span><span class='hljl-n'>NO_OF_POSITIVE</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>sum</span><span class='hljl-p'>(</span><span class='hljl-n'>𝒚_ALL_train</span><span class='hljl-t'> </span><span class='hljl-oB'>.==</span><span class='hljl-t'> </span><span class='hljl-n'>class_pos</span><span class='hljl-p'>)</span><span class='hljl-t'>
+    </span><span class='hljl-n'>l</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>NO_OF_NEGATIVE</span><span class='hljl-t'> </span><span class='hljl-oB'>+</span><span class='hljl-t'> </span><span class='hljl-n'>NO_OF_POSITIVE</span><span class='hljl-t'>
+
+    </span><span class='hljl-n'>𝑋_neg_train</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>𝑋_ALL_train</span><span class='hljl-p'>[</span><span class='hljl-oB'>:</span><span class='hljl-p'>,</span><span class='hljl-oB'>:</span><span class='hljl-p'>,</span><span class='hljl-n'>𝒚_ALL_train</span><span class='hljl-t'> </span><span class='hljl-oB'>.==</span><span class='hljl-t'> </span><span class='hljl-n'>class_neg</span><span class='hljl-p'>]</span><span class='hljl-t'>
+    </span><span class='hljl-n'>𝑋_pos_train</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>𝑋_ALL_train</span><span class='hljl-p'>[</span><span class='hljl-oB'>:</span><span class='hljl-p'>,</span><span class='hljl-oB'>:</span><span class='hljl-p'>,</span><span class='hljl-n'>𝒚_ALL_train</span><span class='hljl-t'> </span><span class='hljl-oB'>.==</span><span class='hljl-t'> </span><span class='hljl-n'>class_pos</span><span class='hljl-p'>]</span><span class='hljl-t'>
+    </span><span class='hljl-n'>𝒚_neg_train</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-oB'>-</span><span class='hljl-t'> </span><span class='hljl-nf'>ones</span><span class='hljl-p'>(</span><span class='hljl-n'>Int</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>NO_OF_NEGATIVE</span><span class='hljl-p'>)</span><span class='hljl-t'>
+    </span><span class='hljl-n'>𝒚_pos_train</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'>   </span><span class='hljl-nf'>ones</span><span class='hljl-p'>(</span><span class='hljl-n'>Int</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>NO_OF_POSITIVE</span><span class='hljl-p'>)</span><span class='hljl-t'>
+
+    </span><span class='hljl-n'>randomisation</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>randperm</span><span class='hljl-p'>(</span><span class='hljl-n'>l</span><span class='hljl-p'>)</span><span class='hljl-t'>
+    </span><span class='hljl-n'>𝑋</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>hcat</span><span class='hljl-p'>(</span><span class='hljl-nf'>transpose</span><span class='hljl-p'>(</span><span class='hljl-nf'>reshape</span><span class='hljl-p'>(</span><span class='hljl-nf'>cat</span><span class='hljl-p'>(</span><span class='hljl-n'>𝑋_neg_train</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝑋_pos_train</span><span class='hljl-p'>;</span><span class='hljl-t'> </span><span class='hljl-n'>dims</span><span class='hljl-oB'>=</span><span class='hljl-ni'>3</span><span class='hljl-p'>),</span><span class='hljl-t'> </span><span class='hljl-ni'>28</span><span class='hljl-oB'>*</span><span class='hljl-ni'>28</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>l</span><span class='hljl-p'>)),</span><span class='hljl-t'> </span><span class='hljl-nf'>ones</span><span class='hljl-p'>(</span><span class='hljl-n'>l</span><span class='hljl-p'>))[</span><span class='hljl-n'>randomisation</span><span class='hljl-p'>,</span><span class='hljl-oB'>:</span><span class='hljl-p'>]</span><span class='hljl-t'>
+    </span><span class='hljl-n'>𝒚</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>vcat</span><span class='hljl-p'>(</span><span class='hljl-n'>𝒚_neg_train</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝒚_pos_train</span><span class='hljl-p'>)[</span><span class='hljl-n'>randomisation</span><span class='hljl-p'>,</span><span class='hljl-oB'>:</span><span class='hljl-p'>]</span><span class='hljl-t'>
+
+    </span><span class='hljl-nf'>gaussian_kernel_matrix</span><span class='hljl-p'>(</span><span class='hljl-n'>𝑋</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>γ</span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>exp</span><span class='hljl-oB'>.</span><span class='hljl-p'>(</span><span class='hljl-oB'>-</span><span class='hljl-t'> </span><span class='hljl-n'>γ</span><span class='hljl-t'> </span><span class='hljl-oB'>*</span><span class='hljl-t'> </span><span class='hljl-nf'>pairwise</span><span class='hljl-p'>(</span><span class='hljl-nf'>SqEuclidean</span><span class='hljl-p'>(),</span><span class='hljl-t'> </span><span class='hljl-nf'>Matrix</span><span class='hljl-p'>(</span><span class='hljl-n'>𝑋</span><span class='hljl-p'>),</span><span class='hljl-t'> </span><span class='hljl-n'>dims</span><span class='hljl-oB'>=</span><span class='hljl-ni'>1</span><span class='hljl-p'>))</span><span class='hljl-t'>  </span><span class='hljl-cs'># 𝑋&#39;s rows are input tensors.</span><span class='hljl-t'>
+    </span><span class='hljl-n'>K</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>gaussian_kernel_matrix</span><span class='hljl-p'>(</span><span class='hljl-n'>𝑋</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>γ</span><span class='hljl-p'>)</span><span class='hljl-t'>
+
+    </span><span class='hljl-cs'># Load test data</span><span class='hljl-t'>
+    </span><span class='hljl-n'>𝑋_ALL_test</span><span class='hljl-p'>,</span><span class='hljl-t'>  </span><span class='hljl-n'>𝒚_ALL_test</span><span class='hljl-t'>  </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>MNIST</span><span class='hljl-oB'>.</span><span class='hljl-nf'>testdata</span><span class='hljl-p'>(</span><span class='hljl-n'>Float32</span><span class='hljl-p'>)</span><span class='hljl-t'>
+
+    </span><span class='hljl-n'>NO_OF_NEGATIVE_test</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>sum</span><span class='hljl-p'>(</span><span class='hljl-n'>𝒚_ALL_test</span><span class='hljl-t'> </span><span class='hljl-oB'>.==</span><span class='hljl-t'> </span><span class='hljl-n'>class_neg</span><span class='hljl-p'>)</span><span class='hljl-t'>
+    </span><span class='hljl-n'>NO_OF_POSITIVE_test</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>sum</span><span class='hljl-p'>(</span><span class='hljl-n'>𝒚_ALL_test</span><span class='hljl-t'> </span><span class='hljl-oB'>.==</span><span class='hljl-t'> </span><span class='hljl-n'>class_pos</span><span class='hljl-p'>)</span><span class='hljl-t'>
+    </span><span class='hljl-n'>l_test</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>NO_OF_NEGATIVE_test</span><span class='hljl-t'> </span><span class='hljl-oB'>+</span><span class='hljl-t'> </span><span class='hljl-n'>NO_OF_POSITIVE_test</span><span class='hljl-t'>
+
+    </span><span class='hljl-n'>𝑋_neg_test</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>𝑋_ALL_test</span><span class='hljl-p'>[</span><span class='hljl-oB'>:</span><span class='hljl-p'>,</span><span class='hljl-oB'>:</span><span class='hljl-p'>,</span><span class='hljl-n'>𝒚_ALL_test</span><span class='hljl-t'> </span><span class='hljl-oB'>.==</span><span class='hljl-t'> </span><span class='hljl-n'>class_neg</span><span class='hljl-p'>]</span><span class='hljl-t'>
+    </span><span class='hljl-n'>𝑋_pos_test</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>𝑋_ALL_test</span><span class='hljl-p'>[</span><span class='hljl-oB'>:</span><span class='hljl-p'>,</span><span class='hljl-oB'>:</span><span class='hljl-p'>,</span><span class='hljl-n'>𝒚_ALL_test</span><span class='hljl-t'> </span><span class='hljl-oB'>.==</span><span class='hljl-t'> </span><span class='hljl-n'>class_pos</span><span class='hljl-p'>]</span><span class='hljl-t'>
+    </span><span class='hljl-n'>𝒚_neg_test</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-oB'>-</span><span class='hljl-t'> </span><span class='hljl-nf'>ones</span><span class='hljl-p'>(</span><span class='hljl-n'>Int</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>NO_OF_NEGATIVE_test</span><span class='hljl-p'>)</span><span class='hljl-t'>
+    </span><span class='hljl-n'>𝒚_pos_test</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'>   </span><span class='hljl-nf'>ones</span><span class='hljl-p'>(</span><span class='hljl-n'>Int</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>NO_OF_POSITIVE_test</span><span class='hljl-p'>)</span><span class='hljl-t'>
+
+    </span><span class='hljl-n'>𝑋_test</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>hcat</span><span class='hljl-p'>(</span><span class='hljl-nf'>transpose</span><span class='hljl-p'>(</span><span class='hljl-nf'>reshape</span><span class='hljl-p'>(</span><span class='hljl-nf'>cat</span><span class='hljl-p'>(</span><span class='hljl-n'>𝑋_neg_test</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝑋_pos_test</span><span class='hljl-p'>;</span><span class='hljl-t'> </span><span class='hljl-n'>dims</span><span class='hljl-oB'>=</span><span class='hljl-ni'>3</span><span class='hljl-p'>),</span><span class='hljl-t'> </span><span class='hljl-ni'>28</span><span class='hljl-oB'>*</span><span class='hljl-ni'>28</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>l_test</span><span class='hljl-p'>)),</span><span class='hljl-t'> </span><span class='hljl-nf'>ones</span><span class='hljl-p'>(</span><span class='hljl-n'>l_test</span><span class='hljl-p'>))</span><span class='hljl-t'>
+    </span><span class='hljl-n'>𝒚_test</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>vcat</span><span class='hljl-p'>(</span><span class='hljl-n'>𝒚_neg_test</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝒚_pos_test</span><span class='hljl-p'>)</span><span class='hljl-t'>
+
+    </span><span class='hljl-nf'>gaussian_kernel_matrix</span><span class='hljl-p'>(</span><span class='hljl-n'>𝑋</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝑋_test</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>γ</span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>exp</span><span class='hljl-oB'>.</span><span class='hljl-p'>(</span><span class='hljl-oB'>-</span><span class='hljl-t'> </span><span class='hljl-n'>γ</span><span class='hljl-t'> </span><span class='hljl-oB'>*</span><span class='hljl-t'> </span><span class='hljl-nf'>pairwise</span><span class='hljl-p'>(</span><span class='hljl-nf'>SqEuclidean</span><span class='hljl-p'>(),</span><span class='hljl-t'> </span><span class='hljl-nf'>Matrix</span><span class='hljl-p'>(</span><span class='hljl-n'>𝑋_test</span><span class='hljl-p'>),</span><span class='hljl-t'> </span><span class='hljl-nf'>Matrix</span><span class='hljl-p'>(</span><span class='hljl-n'>𝑋</span><span class='hljl-p'>),</span><span class='hljl-t'> </span><span class='hljl-n'>dims</span><span class='hljl-oB'>=</span><span class='hljl-ni'>1</span><span class='hljl-p'>))</span><span class='hljl-t'>  </span><span class='hljl-cs'># 𝑋&#39;s rows are input tensors.</span><span class='hljl-t'>
+    </span><span class='hljl-n'>K_test</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>gaussian_kernel_matrix</span><span class='hljl-p'>(</span><span class='hljl-n'>𝑋</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝑋_test</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>γ</span><span class='hljl-p'>)</span><span class='hljl-t'>
+
+    </span><span class='hljl-k'>return</span><span class='hljl-t'> </span><span class='hljl-p'>(</span><span class='hljl-n'>𝑋</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝒚</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>K</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>l</span><span class='hljl-p'>),</span><span class='hljl-t'> </span><span class='hljl-p'>(</span><span class='hljl-n'>𝑋_test</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝒚_test</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>K_test</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>l_test</span><span class='hljl-p'>)</span><span class='hljl-t'>
+</span><span class='hljl-k'>end</span><span class='hljl-t'>
+
+</span><span class='hljl-cs'># Only as termination criterion for the whole process.</span><span class='hljl-t'>
+</span><span class='hljl-k'>function</span><span class='hljl-t'> </span><span class='hljl-nf'>monitor_kkt_condition</span><span class='hljl-p'>(</span><span class='hljl-n'>𝜶</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝝈</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝒚</span><span class='hljl-p'>;</span><span class='hljl-t'> </span><span class='hljl-n'>accuracy</span><span class='hljl-oB'>=</span><span class='hljl-nfB'>1e-2</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝐶</span><span class='hljl-oB'>::</span><span class='hljl-n'>Int32</span><span class='hljl-oB'>=</span><span class='hljl-nf'>Int32</span><span class='hljl-p'>(</span><span class='hljl-ni'>1</span><span class='hljl-p'>))</span><span class='hljl-t'>
+    </span><span class='hljl-n'>𝑦𝑓𝒙</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>𝒚</span><span class='hljl-t'> </span><span class='hljl-oB'>.*</span><span class='hljl-t'> </span><span class='hljl-n'>𝝈</span><span class='hljl-t'>
+    </span><span class='hljl-k'>for</span><span class='hljl-t'> </span><span class='hljl-p'>(</span><span class='hljl-n'>idx</span><span class='hljl-p'>,</span><span class='hljl-n'>α</span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-kp'>in</span><span class='hljl-t'> </span><span class='hljl-nf'>enumerate</span><span class='hljl-p'>(</span><span class='hljl-n'>𝜶</span><span class='hljl-p'>)</span><span class='hljl-t'>
+        </span><span class='hljl-k'>if</span><span class='hljl-t'> </span><span class='hljl-n'>α</span><span class='hljl-t'> </span><span class='hljl-oB'>==</span><span class='hljl-t'> </span><span class='hljl-ni'>0</span><span class='hljl-t'> </span><span class='hljl-oB'>&amp;&amp;</span><span class='hljl-t'> </span><span class='hljl-n'>𝑦𝑓𝒙</span><span class='hljl-p'>[</span><span class='hljl-n'>idx</span><span class='hljl-p'>]</span><span class='hljl-t'> </span><span class='hljl-oB'>&lt;</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-t'>
+            </span><span class='hljl-k'>return</span><span class='hljl-t'> </span><span class='hljl-kc'>false</span><span class='hljl-t'>
+        </span><span class='hljl-k'>elseif</span><span class='hljl-t'> </span><span class='hljl-n'>α</span><span class='hljl-t'> </span><span class='hljl-oB'>==</span><span class='hljl-t'> </span><span class='hljl-n'>𝐶</span><span class='hljl-t'> </span><span class='hljl-oB'>&amp;&amp;</span><span class='hljl-t'> </span><span class='hljl-n'>𝑦𝑓𝒙</span><span class='hljl-p'>[</span><span class='hljl-n'>idx</span><span class='hljl-p'>]</span><span class='hljl-t'> </span><span class='hljl-oB'>&gt;</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-t'>
+            </span><span class='hljl-k'>return</span><span class='hljl-t'> </span><span class='hljl-kc'>false</span><span class='hljl-t'>
+        </span><span class='hljl-k'>elseif</span><span class='hljl-t'> </span><span class='hljl-ni'>0</span><span class='hljl-t'> </span><span class='hljl-oB'>&lt;</span><span class='hljl-t'> </span><span class='hljl-n'>α</span><span class='hljl-t'> </span><span class='hljl-oB'>&lt;</span><span class='hljl-t'> </span><span class='hljl-n'>𝐶</span><span class='hljl-t'> </span><span class='hljl-oB'>&amp;&amp;</span><span class='hljl-t'> </span><span class='hljl-oB'>!</span><span class='hljl-nf'>isapprox</span><span class='hljl-p'>(</span><span class='hljl-n'>𝑦𝑓𝒙</span><span class='hljl-p'>[</span><span class='hljl-n'>idx</span><span class='hljl-p'>],</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-p'>;</span><span class='hljl-t'> </span><span class='hljl-n'>atol</span><span class='hljl-oB'>=</span><span class='hljl-n'>accuracy</span><span class='hljl-p'>)</span><span class='hljl-t'>
+            </span><span class='hljl-k'>return</span><span class='hljl-t'> </span><span class='hljl-kc'>false</span><span class='hljl-t'>
+        </span><span class='hljl-k'>end</span><span class='hljl-t'>
+    </span><span class='hljl-k'>end</span><span class='hljl-t'>
+    </span><span class='hljl-k'>return</span><span class='hljl-t'> </span><span class='hljl-kc'>true</span><span class='hljl-t'>
+</span><span class='hljl-k'>end</span><span class='hljl-t'>
+
+</span><span class='hljl-k'>function</span><span class='hljl-t'> </span><span class='hljl-nf'>select_new_points</span><span class='hljl-p'>(</span><span class='hljl-n'>𝜶</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝝈</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝒚</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝑀</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>support_vector_idx</span><span class='hljl-p'>;</span><span class='hljl-t'> </span><span class='hljl-n'>accuracy</span><span class='hljl-oB'>=</span><span class='hljl-nfB'>1e-2</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝐶</span><span class='hljl-oB'>::</span><span class='hljl-n'>Int32</span><span class='hljl-oB'>=</span><span class='hljl-nf'>Int32</span><span class='hljl-p'>(</span><span class='hljl-ni'>1</span><span class='hljl-p'>))</span><span class='hljl-t'>
+    </span><span class='hljl-n'>𝑦𝑓𝒙</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>𝒚</span><span class='hljl-t'> </span><span class='hljl-oB'>.*</span><span class='hljl-t'> </span><span class='hljl-n'>𝝈</span><span class='hljl-t'>
+    </span><span class='hljl-n'>list_of_new_ids</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>Int</span><span class='hljl-p'>[]</span><span class='hljl-t'>
+    </span><span class='hljl-n'>list_of_new_min</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>Float64</span><span class='hljl-p'>[]</span><span class='hljl-t'>
+    </span><span class='hljl-k'>for</span><span class='hljl-t'> </span><span class='hljl-p'>(</span><span class='hljl-n'>idx</span><span class='hljl-p'>,</span><span class='hljl-n'>α</span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-kp'>in</span><span class='hljl-t'> </span><span class='hljl-nf'>enumerate</span><span class='hljl-p'>(</span><span class='hljl-n'>𝜶</span><span class='hljl-p'>)</span><span class='hljl-t'>
+        </span><span class='hljl-k'>if</span><span class='hljl-t'> </span><span class='hljl-p'>(</span><span class='hljl-n'>α</span><span class='hljl-t'> </span><span class='hljl-oB'>==</span><span class='hljl-t'> </span><span class='hljl-ni'>0</span><span class='hljl-t'> </span><span class='hljl-oB'>&amp;&amp;</span><span class='hljl-t'> </span><span class='hljl-n'>𝑦𝑓𝒙</span><span class='hljl-p'>[</span><span class='hljl-n'>idx</span><span class='hljl-p'>]</span><span class='hljl-t'> </span><span class='hljl-oB'>&lt;</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-oB'>||</span><span class='hljl-t'> </span><span class='hljl-p'>(</span><span class='hljl-n'>α</span><span class='hljl-t'> </span><span class='hljl-oB'>==</span><span class='hljl-t'> </span><span class='hljl-n'>𝐶</span><span class='hljl-t'> </span><span class='hljl-oB'>&amp;&amp;</span><span class='hljl-t'> </span><span class='hljl-n'>𝑦𝑓𝒙</span><span class='hljl-p'>[</span><span class='hljl-n'>idx</span><span class='hljl-p'>]</span><span class='hljl-t'> </span><span class='hljl-oB'>&gt;</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-oB'>||</span><span class='hljl-t'> </span><span class='hljl-p'>(</span><span class='hljl-ni'>0</span><span class='hljl-t'> </span><span class='hljl-oB'>&lt;</span><span class='hljl-t'> </span><span class='hljl-n'>α</span><span class='hljl-t'> </span><span class='hljl-oB'>&lt;</span><span class='hljl-t'> </span><span class='hljl-n'>𝐶</span><span class='hljl-t'> </span><span class='hljl-oB'>&amp;&amp;</span><span class='hljl-t'> </span><span class='hljl-oB'>!</span><span class='hljl-nf'>isapprox</span><span class='hljl-p'>(</span><span class='hljl-n'>𝑦𝑓𝒙</span><span class='hljl-p'>[</span><span class='hljl-n'>idx</span><span class='hljl-p'>],</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-p'>;</span><span class='hljl-t'> </span><span class='hljl-n'>atol</span><span class='hljl-oB'>=</span><span class='hljl-n'>accuracy</span><span class='hljl-p'>))</span><span class='hljl-t'>
+            </span><span class='hljl-nf'>push!</span><span class='hljl-p'>(</span><span class='hljl-n'>list_of_new_ids</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>idx</span><span class='hljl-p'>)</span><span class='hljl-t'>
+            </span><span class='hljl-nf'>push!</span><span class='hljl-p'>(</span><span class='hljl-n'>list_of_new_min</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝑦𝑓𝒙</span><span class='hljl-p'>[</span><span class='hljl-n'>idx</span><span class='hljl-p'>])</span><span class='hljl-t'>
+        </span><span class='hljl-k'>end</span><span class='hljl-t'>
+    </span><span class='hljl-k'>end</span><span class='hljl-t'>
+    </span><span class='hljl-n'>list_of_new_ids</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>list_of_new_ids</span><span class='hljl-p'>[</span><span class='hljl-nf'>sortperm</span><span class='hljl-p'>(</span><span class='hljl-n'>list_of_new_min</span><span class='hljl-p'>)]</span><span class='hljl-t'>
+    </span><span class='hljl-nf'>setdiff!</span><span class='hljl-p'>(</span><span class='hljl-n'>list_of_new_ids</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>support_vector_idx</span><span class='hljl-p'>)</span><span class='hljl-t'>
+    </span><span class='hljl-k'>return</span><span class='hljl-t'> </span><span class='hljl-n'>list_of_new_ids</span><span class='hljl-t'>
+</span><span class='hljl-k'>end</span>
+</pre>
+
+
+                <pre class="output">
+select_new_points &#40;generic function with 1 method&#41;
+</pre>
+
+
+                <h1>Julia SVM</h1>
+
+
+                <pre class='hljl'>
+<span class='hljl-cs'>##############################</span><span class='hljl-t'>
+</span><span class='hljl-cs'>## by Qin Yu, Apr 2019</span><span class='hljl-t'>
+</span><span class='hljl-cs'>## using Julia 1.1.0</span><span class='hljl-t'>
+</span><span class='hljl-cs'>##############################</span><span class='hljl-t'>
+
+</span><span class='hljl-k'>using</span><span class='hljl-t'> </span><span class='hljl-n'>Revise</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>BenchmarkTools</span><span class='hljl-t'>                           </span><span class='hljl-cs'># Development</span><span class='hljl-t'>
+</span><span class='hljl-k'>using</span><span class='hljl-t'> </span><span class='hljl-n'>JLD2</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>FileIO</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>MLDatasets</span><span class='hljl-t'>                         </span><span class='hljl-cs'># Data &amp; IO</span><span class='hljl-t'>
+</span><span class='hljl-k'>using</span><span class='hljl-t'> </span><span class='hljl-n'>LinearAlgebra</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>Distances</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>Random</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>Distributions</span><span class='hljl-t'>  </span><span class='hljl-cs'># Maths</span><span class='hljl-t'>
+</span><span class='hljl-k'>using</span><span class='hljl-t'> </span><span class='hljl-n'>CUDAdrv</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>CUDAnative</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>CuArrays</span><span class='hljl-t'>                    </span><span class='hljl-cs'># GPU</span><span class='hljl-t'>
+
+</span><span class='hljl-n'>MAX_MINI_BATCH_ID</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-ni'>50</span><span class='hljl-t'>
+
+</span><span class='hljl-cs'>#################### Compute Adatron SGD in GPU: ####################</span><span class='hljl-t'>
+</span><span class='hljl-nd'>@inline</span><span class='hljl-t'> </span><span class='hljl-nf'>sync_threads_and</span><span class='hljl-p'>(</span><span class='hljl-n'>predicate</span><span class='hljl-oB'>::</span><span class='hljl-n'>Int32</span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-k'>ccall</span><span class='hljl-p'>(</span><span class='hljl-s'>&quot;llvm.nvvm.barrier0.and&quot;</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>llvmcall</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>Int32</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-p'>(</span><span class='hljl-n'>Int32</span><span class='hljl-p'>,),</span><span class='hljl-t'> </span><span class='hljl-n'>predicate</span><span class='hljl-p'>)</span><span class='hljl-t'>
+</span><span class='hljl-nd'>@inline</span><span class='hljl-t'> </span><span class='hljl-nf'>sync_threads_and</span><span class='hljl-p'>(</span><span class='hljl-n'>predicate</span><span class='hljl-oB'>::</span><span class='hljl-n'>Bool</span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>ifelse</span><span class='hljl-p'>(</span><span class='hljl-nf'>sync_threads_and</span><span class='hljl-p'>(</span><span class='hljl-nf'>Int32</span><span class='hljl-p'>(</span><span class='hljl-n'>predicate</span><span class='hljl-p'>))</span><span class='hljl-t'> </span><span class='hljl-oB'>!==</span><span class='hljl-t'> </span><span class='hljl-nf'>Int32</span><span class='hljl-p'>(</span><span class='hljl-ni'>0</span><span class='hljl-p'>),</span><span class='hljl-t'> </span><span class='hljl-kc'>true</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-kc'>false</span><span class='hljl-p'>)</span><span class='hljl-t'>
+
+</span><span class='hljl-k'>function</span><span class='hljl-t'> </span><span class='hljl-nf'>kernel_soft_SGD_SVM</span><span class='hljl-p'>(</span><span class='hljl-n'>𝜶</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝝈</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>K</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝒚</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>l</span><span class='hljl-oB'>::</span><span class='hljl-n'>Int32</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝐶</span><span class='hljl-oB'>::</span><span class='hljl-n'>Int32</span><span class='hljl-p'>)</span><span class='hljl-t'>
+    </span><span class='hljl-n'>j</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-p'>(</span><span class='hljl-nf'>blockIdx</span><span class='hljl-p'>()</span><span class='hljl-oB'>.</span><span class='hljl-n'>x</span><span class='hljl-oB'>-</span><span class='hljl-ni'>1</span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-oB'>*</span><span class='hljl-t'> </span><span class='hljl-nf'>blockDim</span><span class='hljl-p'>()</span><span class='hljl-oB'>.</span><span class='hljl-n'>x</span><span class='hljl-t'> </span><span class='hljl-oB'>+</span><span class='hljl-t'> </span><span class='hljl-nf'>threadIdx</span><span class='hljl-p'>()</span><span class='hljl-oB'>.</span><span class='hljl-n'>x</span><span class='hljl-t'>
+    </span><span class='hljl-n'>can_stop</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-kc'>false</span><span class='hljl-t'>
+    </span><span class='hljl-n'>δᵢ</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nd'>@cuStaticSharedMem</span><span class='hljl-p'>(</span><span class='hljl-n'>Float32</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-p'>)</span><span class='hljl-t'>
+    </span><span class='hljl-k'>while</span><span class='hljl-t'> </span><span class='hljl-oB'>!</span><span class='hljl-nf'>sync_threads_and</span><span class='hljl-p'>(</span><span class='hljl-n'>can_stop</span><span class='hljl-p'>)</span><span class='hljl-t'>
+        </span><span class='hljl-n'>last_α_j</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>𝜶</span><span class='hljl-p'>[</span><span class='hljl-n'>j</span><span class='hljl-p'>]</span><span class='hljl-t'>
+        </span><span class='hljl-cs'># Adatron:</span><span class='hljl-t'>
+        </span><span class='hljl-k'>for</span><span class='hljl-t'> </span><span class='hljl-n'>i</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-oB'>:</span><span class='hljl-n'>l</span><span class='hljl-t'>
+            </span><span class='hljl-k'>if</span><span class='hljl-t'> </span><span class='hljl-n'>j</span><span class='hljl-t'> </span><span class='hljl-oB'>==</span><span class='hljl-t'> </span><span class='hljl-n'>i</span><span class='hljl-t'>  </span><span class='hljl-cs'># Online</span><span class='hljl-t'>
+                </span><span class='hljl-n'>last_α</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>𝜶</span><span class='hljl-p'>[</span><span class='hljl-n'>i</span><span class='hljl-p'>]</span><span class='hljl-t'>
+                </span><span class='hljl-n'>𝜇ᵢ</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-t'> </span><span class='hljl-oB'>/</span><span class='hljl-t'> </span><span class='hljl-n'>K</span><span class='hljl-p'>[</span><span class='hljl-n'>i</span><span class='hljl-p'>,</span><span class='hljl-n'>i</span><span class='hljl-p'>]</span><span class='hljl-t'>
+                </span><span class='hljl-n'>δᵢ</span><span class='hljl-p'>[</span><span class='hljl-ni'>1</span><span class='hljl-p'>]</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>𝜇ᵢ</span><span class='hljl-t'> </span><span class='hljl-oB'>*</span><span class='hljl-t'> </span><span class='hljl-p'>(</span><span class='hljl-ni'>1</span><span class='hljl-t'> </span><span class='hljl-oB'>-</span><span class='hljl-t'> </span><span class='hljl-n'>𝒚</span><span class='hljl-p'>[</span><span class='hljl-n'>i</span><span class='hljl-p'>]</span><span class='hljl-t'> </span><span class='hljl-oB'>*</span><span class='hljl-t'> </span><span class='hljl-n'>𝝈</span><span class='hljl-p'>[</span><span class='hljl-n'>i</span><span class='hljl-p'>])</span><span class='hljl-t'>
+                </span><span class='hljl-n'>𝜶</span><span class='hljl-p'>[</span><span class='hljl-n'>i</span><span class='hljl-p'>]</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>𝜶</span><span class='hljl-p'>[</span><span class='hljl-n'>i</span><span class='hljl-p'>]</span><span class='hljl-t'> </span><span class='hljl-oB'>+</span><span class='hljl-t'> </span><span class='hljl-n'>δᵢ</span><span class='hljl-p'>[</span><span class='hljl-ni'>1</span><span class='hljl-p'>]</span><span class='hljl-t'>
+                </span><span class='hljl-n'>𝜶</span><span class='hljl-p'>[</span><span class='hljl-n'>i</span><span class='hljl-p'>]</span><span class='hljl-t'> </span><span class='hljl-oB'>&lt;</span><span class='hljl-t'> </span><span class='hljl-ni'>0</span><span class='hljl-t'> </span><span class='hljl-oB'>&amp;&amp;</span><span class='hljl-t'> </span><span class='hljl-p'>(</span><span class='hljl-n'>𝜶</span><span class='hljl-p'>[</span><span class='hljl-n'>i</span><span class='hljl-p'>]</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-ni'>0</span><span class='hljl-p'>;</span><span class='hljl-t'> </span><span class='hljl-n'>δᵢ</span><span class='hljl-p'>[</span><span class='hljl-ni'>1</span><span class='hljl-p'>]</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-ni'>0</span><span class='hljl-t'> </span><span class='hljl-oB'>-</span><span class='hljl-t'> </span><span class='hljl-n'>last_α</span><span class='hljl-p'>)</span><span class='hljl-t'>
+                </span><span class='hljl-n'>𝜶</span><span class='hljl-p'>[</span><span class='hljl-n'>i</span><span class='hljl-p'>]</span><span class='hljl-t'> </span><span class='hljl-oB'>&gt;</span><span class='hljl-t'> </span><span class='hljl-n'>𝐶</span><span class='hljl-t'> </span><span class='hljl-oB'>&amp;&amp;</span><span class='hljl-t'> </span><span class='hljl-p'>(</span><span class='hljl-n'>𝜶</span><span class='hljl-p'>[</span><span class='hljl-n'>i</span><span class='hljl-p'>]</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>𝐶</span><span class='hljl-p'>;</span><span class='hljl-t'> </span><span class='hljl-n'>δᵢ</span><span class='hljl-p'>[</span><span class='hljl-ni'>1</span><span class='hljl-p'>]</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>𝐶</span><span class='hljl-t'> </span><span class='hljl-oB'>-</span><span class='hljl-t'> </span><span class='hljl-n'>last_α</span><span class='hljl-p'>)</span><span class='hljl-t'>
+            </span><span class='hljl-k'>end</span><span class='hljl-t'>
+            </span><span class='hljl-nf'>sync_threads</span><span class='hljl-p'>()</span><span class='hljl-t'>
+            </span><span class='hljl-n'>𝝈</span><span class='hljl-p'>[</span><span class='hljl-n'>j</span><span class='hljl-p'>]</span><span class='hljl-t'> </span><span class='hljl-oB'>+=</span><span class='hljl-t'> </span><span class='hljl-n'>δᵢ</span><span class='hljl-p'>[</span><span class='hljl-ni'>1</span><span class='hljl-p'>]</span><span class='hljl-t'> </span><span class='hljl-oB'>*</span><span class='hljl-t'> </span><span class='hljl-n'>𝒚</span><span class='hljl-p'>[</span><span class='hljl-n'>i</span><span class='hljl-p'>]</span><span class='hljl-t'> </span><span class='hljl-oB'>*</span><span class='hljl-t'> </span><span class='hljl-n'>K</span><span class='hljl-p'>[</span><span class='hljl-n'>i</span><span class='hljl-p'>,</span><span class='hljl-n'>j</span><span class='hljl-p'>]</span><span class='hljl-t'>  </span><span class='hljl-cs'># Parallel update</span><span class='hljl-t'>
+        </span><span class='hljl-k'>end</span><span class='hljl-t'>
+        </span><span class='hljl-cs'># Stopping criterion:</span><span class='hljl-t'>
+        </span><span class='hljl-n'>can_stop</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-kc'>false</span><span class='hljl-t'>
+        </span><span class='hljl-nf'>isapprox</span><span class='hljl-p'>(</span><span class='hljl-n'>𝜶</span><span class='hljl-p'>[</span><span class='hljl-n'>j</span><span class='hljl-p'>],</span><span class='hljl-t'> </span><span class='hljl-n'>last_α_j</span><span class='hljl-p'>;</span><span class='hljl-t'> </span><span class='hljl-n'>atol</span><span class='hljl-oB'>=</span><span class='hljl-nfB'>1e-4</span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-oB'>&amp;&amp;</span><span class='hljl-t'> </span><span class='hljl-p'>(</span><span class='hljl-n'>can_stop</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-kc'>true</span><span class='hljl-p'>)</span><span class='hljl-t'>
+    </span><span class='hljl-k'>end</span><span class='hljl-t'>
+    </span><span class='hljl-k'>return</span><span class='hljl-t'> </span><span class='hljl-n'>nothing</span><span class='hljl-t'>
+</span><span class='hljl-k'>end</span><span class='hljl-t'>
+
+</span><span class='hljl-k'>function</span><span class='hljl-t'> </span><span class='hljl-nf'>optimise_working_set</span><span class='hljl-p'>(</span><span class='hljl-n'>𝜶</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝝈</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>K</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝒚</span><span class='hljl-p'>;</span><span class='hljl-t'> </span><span class='hljl-n'>𝐶</span><span class='hljl-oB'>::</span><span class='hljl-n'>Int32</span><span class='hljl-oB'>=</span><span class='hljl-nf'>Int32</span><span class='hljl-p'>(</span><span class='hljl-ni'>1</span><span class='hljl-p'>))</span><span class='hljl-t'>
+    </span><span class='hljl-n'>l</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>Int32</span><span class='hljl-p'>(</span><span class='hljl-nf'>length</span><span class='hljl-p'>(</span><span class='hljl-n'>𝜶</span><span class='hljl-p'>))</span><span class='hljl-t'>
+    </span><span class='hljl-n'>cu_𝜶</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>CuArray</span><span class='hljl-p'>{</span><span class='hljl-n'>Float32</span><span class='hljl-p'>}(</span><span class='hljl-n'>𝜶</span><span class='hljl-p'>)</span><span class='hljl-t'>
+    </span><span class='hljl-n'>cu_𝝈</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>CuArray</span><span class='hljl-p'>{</span><span class='hljl-n'>Float32</span><span class='hljl-p'>}(</span><span class='hljl-n'>𝝈</span><span class='hljl-p'>)</span><span class='hljl-t'>
+    </span><span class='hljl-n'>cu_K</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>CuArray</span><span class='hljl-p'>{</span><span class='hljl-n'>Float32</span><span class='hljl-p'>}(</span><span class='hljl-n'>K</span><span class='hljl-p'>)</span><span class='hljl-t'>
+    </span><span class='hljl-n'>cu_𝒚</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>CuArray</span><span class='hljl-p'>{</span><span class='hljl-n'>Float32</span><span class='hljl-p'>}(</span><span class='hljl-n'>𝒚</span><span class='hljl-p'>)</span><span class='hljl-t'>
+
+    </span><span class='hljl-nd'>@cuda</span><span class='hljl-t'> </span><span class='hljl-n'>threads</span><span class='hljl-oB'>=</span><span class='hljl-n'>l</span><span class='hljl-t'> </span><span class='hljl-nf'>kernel_soft_SGD_SVM</span><span class='hljl-p'>(</span><span class='hljl-n'>cu_𝜶</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>cu_𝝈</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>cu_K</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>cu_𝒚</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>l</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝐶</span><span class='hljl-p'>)</span><span class='hljl-t'>
+
+    </span><span class='hljl-n'>𝜶</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>Array</span><span class='hljl-p'>{</span><span class='hljl-n'>Float32</span><span class='hljl-p'>}(</span><span class='hljl-n'>cu_𝜶</span><span class='hljl-p'>)</span><span class='hljl-t'>
+    </span><span class='hljl-k'>return</span><span class='hljl-t'> </span><span class='hljl-n'>𝜶</span><span class='hljl-t'>
+</span><span class='hljl-k'>end</span><span class='hljl-t'>
+
+</span><span class='hljl-k'>function</span><span class='hljl-t'> </span><span class='hljl-nf'>optimise_working_set_CPU</span><span class='hljl-p'>(</span><span class='hljl-n'>𝜶</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝝈</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>K</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝒚</span><span class='hljl-p'>;</span><span class='hljl-t'> </span><span class='hljl-n'>𝐶</span><span class='hljl-oB'>=</span><span class='hljl-ni'>1</span><span class='hljl-p'>)</span><span class='hljl-t'>
+    </span><span class='hljl-n'>l</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>length</span><span class='hljl-p'>(</span><span class='hljl-n'>𝜶</span><span class='hljl-p'>)</span><span class='hljl-t'>
+    </span><span class='hljl-k'>while</span><span class='hljl-t'> </span><span class='hljl-kc'>true</span><span class='hljl-t'>
+        </span><span class='hljl-n'>last_𝜶</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>copy</span><span class='hljl-p'>(</span><span class='hljl-n'>𝜶</span><span class='hljl-p'>)</span><span class='hljl-t'>
+        </span><span class='hljl-k'>for</span><span class='hljl-t'> </span><span class='hljl-n'>i</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-oB'>:</span><span class='hljl-n'>l</span><span class='hljl-t'>
+            </span><span class='hljl-n'>𝜇ᵢ</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-t'> </span><span class='hljl-oB'>/</span><span class='hljl-t'> </span><span class='hljl-n'>K</span><span class='hljl-p'>[</span><span class='hljl-n'>i</span><span class='hljl-p'>,</span><span class='hljl-n'>i</span><span class='hljl-p'>]</span><span class='hljl-t'>
+            </span><span class='hljl-n'>δᵢ</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>𝜇ᵢ</span><span class='hljl-t'> </span><span class='hljl-oB'>*</span><span class='hljl-t'> </span><span class='hljl-p'>(</span><span class='hljl-ni'>1</span><span class='hljl-t'> </span><span class='hljl-oB'>-</span><span class='hljl-t'> </span><span class='hljl-n'>𝒚</span><span class='hljl-p'>[</span><span class='hljl-n'>i</span><span class='hljl-p'>]</span><span class='hljl-t'> </span><span class='hljl-oB'>*</span><span class='hljl-t'> </span><span class='hljl-n'>𝝈</span><span class='hljl-p'>[</span><span class='hljl-n'>i</span><span class='hljl-p'>])</span><span class='hljl-t'>
+            </span><span class='hljl-n'>𝜶</span><span class='hljl-p'>[</span><span class='hljl-n'>i</span><span class='hljl-p'>]</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>𝜶</span><span class='hljl-p'>[</span><span class='hljl-n'>i</span><span class='hljl-p'>]</span><span class='hljl-t'> </span><span class='hljl-oB'>+</span><span class='hljl-t'> </span><span class='hljl-n'>δᵢ</span><span class='hljl-t'>
+            </span><span class='hljl-n'>𝜶</span><span class='hljl-p'>[</span><span class='hljl-n'>i</span><span class='hljl-p'>]</span><span class='hljl-t'> </span><span class='hljl-oB'>&lt;</span><span class='hljl-t'> </span><span class='hljl-ni'>0</span><span class='hljl-t'> </span><span class='hljl-oB'>&amp;&amp;</span><span class='hljl-t'> </span><span class='hljl-p'>(</span><span class='hljl-n'>𝜶</span><span class='hljl-p'>[</span><span class='hljl-n'>i</span><span class='hljl-p'>]</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-ni'>0</span><span class='hljl-p'>;</span><span class='hljl-t'> </span><span class='hljl-n'>δᵢ</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-ni'>0</span><span class='hljl-t'> </span><span class='hljl-oB'>-</span><span class='hljl-t'> </span><span class='hljl-n'>last_𝜶</span><span class='hljl-p'>[</span><span class='hljl-n'>i</span><span class='hljl-p'>])</span><span class='hljl-t'>
+            </span><span class='hljl-n'>𝜶</span><span class='hljl-p'>[</span><span class='hljl-n'>i</span><span class='hljl-p'>]</span><span class='hljl-t'> </span><span class='hljl-oB'>&gt;</span><span class='hljl-t'> </span><span class='hljl-n'>𝐶</span><span class='hljl-t'> </span><span class='hljl-oB'>&amp;&amp;</span><span class='hljl-t'> </span><span class='hljl-p'>(</span><span class='hljl-n'>𝜶</span><span class='hljl-p'>[</span><span class='hljl-n'>i</span><span class='hljl-p'>]</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>𝐶</span><span class='hljl-p'>;</span><span class='hljl-t'> </span><span class='hljl-n'>δᵢ</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>𝐶</span><span class='hljl-t'> </span><span class='hljl-oB'>-</span><span class='hljl-t'> </span><span class='hljl-n'>last_𝜶</span><span class='hljl-p'>[</span><span class='hljl-n'>i</span><span class='hljl-p'>])</span><span class='hljl-t'>
+            </span><span class='hljl-n'>𝝈</span><span class='hljl-t'> </span><span class='hljl-oB'>.+=</span><span class='hljl-t'> </span><span class='hljl-n'>δᵢ</span><span class='hljl-t'> </span><span class='hljl-oB'>*</span><span class='hljl-t'> </span><span class='hljl-n'>𝒚</span><span class='hljl-p'>[</span><span class='hljl-n'>i</span><span class='hljl-p'>]</span><span class='hljl-t'> </span><span class='hljl-oB'>*</span><span class='hljl-t'> </span><span class='hljl-n'>K</span><span class='hljl-p'>[</span><span class='hljl-n'>i</span><span class='hljl-p'>,</span><span class='hljl-oB'>:</span><span class='hljl-p'>]</span><span class='hljl-t'>
+        </span><span class='hljl-k'>end</span><span class='hljl-t'>
+        </span><span class='hljl-nf'>all</span><span class='hljl-p'>(</span><span class='hljl-n'>isapprox</span><span class='hljl-oB'>.</span><span class='hljl-p'>(</span><span class='hljl-n'>last_𝜶</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝜶</span><span class='hljl-p'>;</span><span class='hljl-t'> </span><span class='hljl-n'>atol</span><span class='hljl-oB'>=</span><span class='hljl-nfB'>1e-4</span><span class='hljl-p'>))</span><span class='hljl-t'> </span><span class='hljl-oB'>&amp;&amp;</span><span class='hljl-t'> </span><span class='hljl-k'>break</span><span class='hljl-t'>
+    </span><span class='hljl-k'>end</span><span class='hljl-t'>
+    </span><span class='hljl-k'>return</span><span class='hljl-t'> </span><span class='hljl-n'>𝜶</span><span class='hljl-t'>
+</span><span class='hljl-k'>end</span><span class='hljl-t'>
+
+</span><span class='hljl-k'>function</span><span class='hljl-t'> </span><span class='hljl-nf'>stochastic_decomposition_test</span><span class='hljl-p'>(</span><span class='hljl-n'>𝐶</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝑀</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>ACCURACY</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>l</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝒚</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>K</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>l_test</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝒚_test</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>K_test</span><span class='hljl-p'>;</span><span class='hljl-t'> </span><span class='hljl-n'>usecpu</span><span class='hljl-oB'>=</span><span class='hljl-kc'>false</span><span class='hljl-p'>)</span><span class='hljl-t'>
+    </span><span class='hljl-n'>𝑀_safe</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>div</span><span class='hljl-p'>(</span><span class='hljl-n'>𝑀</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>4</span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-oB'>*</span><span class='hljl-t'> </span><span class='hljl-ni'>3</span><span class='hljl-t'>
+    </span><span class='hljl-n'>𝑀_rand</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>𝑀</span><span class='hljl-t'> </span><span class='hljl-oB'>-</span><span class='hljl-t'> </span><span class='hljl-n'>𝑀_safe</span><span class='hljl-t'>
+
+    </span><span class='hljl-n'>𝜶</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>zeros</span><span class='hljl-p'>(</span><span class='hljl-n'>Float32</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>l</span><span class='hljl-p'>)</span><span class='hljl-t'>
+    </span><span class='hljl-n'>𝝈</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>zeros</span><span class='hljl-p'>(</span><span class='hljl-n'>Float32</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>l</span><span class='hljl-p'>)</span><span class='hljl-t'>
+
+    </span><span class='hljl-n'>selected_new_idx</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-p'>[]</span><span class='hljl-t'>
+    </span><span class='hljl-n'>support_vector_idx</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>alpha0_vector_idx</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>collect</span><span class='hljl-p'>(</span><span class='hljl-ni'>1</span><span class='hljl-oB'>:</span><span class='hljl-n'>𝑀</span><span class='hljl-p'>),</span><span class='hljl-t'> </span><span class='hljl-nf'>collect</span><span class='hljl-p'>(</span><span class='hljl-n'>𝑀</span><span class='hljl-oB'>+</span><span class='hljl-ni'>1</span><span class='hljl-oB'>:</span><span class='hljl-n'>l</span><span class='hljl-p'>)</span><span class='hljl-t'>
+    </span><span class='hljl-n'>working_set_counter</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>zeros</span><span class='hljl-p'>(</span><span class='hljl-n'>Int32</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>l</span><span class='hljl-p'>)</span><span class='hljl-t'>
+
+    </span><span class='hljl-n'>batch_id</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-ni'>0</span><span class='hljl-t'>
+    </span><span class='hljl-k'>while</span><span class='hljl-t'> </span><span class='hljl-oB'>!</span><span class='hljl-nf'>monitor_kkt_condition</span><span class='hljl-p'>(</span><span class='hljl-n'>𝜶</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝝈</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝒚</span><span class='hljl-p'>;</span><span class='hljl-t'> </span><span class='hljl-n'>𝐶</span><span class='hljl-oB'>=</span><span class='hljl-n'>𝐶</span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-oB'>&amp;&amp;</span><span class='hljl-t'> </span><span class='hljl-n'>batch_id</span><span class='hljl-t'> </span><span class='hljl-oB'>&lt;</span><span class='hljl-t'> </span><span class='hljl-n'>MAX_MINI_BATCH_ID</span><span class='hljl-t'>
+        </span><span class='hljl-n'>batch_id</span><span class='hljl-t'> </span><span class='hljl-oB'>+=</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-t'>
+
+        </span><span class='hljl-n'>current_working_set_counter</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>working_set_counter</span><span class='hljl-p'>[</span><span class='hljl-n'>support_vector_idx</span><span class='hljl-p'>]</span><span class='hljl-t'>
+        </span><span class='hljl-n'>sorted_support_vector_idx</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>support_vector_idx</span><span class='hljl-p'>[</span><span class='hljl-nf'>sortperm</span><span class='hljl-p'>(</span><span class='hljl-n'>current_working_set_counter</span><span class='hljl-p'>)]</span><span class='hljl-t'>
+
+        </span><span class='hljl-k'>if</span><span class='hljl-t'> </span><span class='hljl-nf'>length</span><span class='hljl-p'>(</span><span class='hljl-n'>support_vector_idx</span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-oB'>&gt;=</span><span class='hljl-t'> </span><span class='hljl-n'>𝑀_safe</span><span class='hljl-t'>
+            </span><span class='hljl-n'>no_of_new_idx</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>min</span><span class='hljl-p'>(</span><span class='hljl-nf'>length</span><span class='hljl-p'>(</span><span class='hljl-n'>selected_new_idx</span><span class='hljl-p'>),</span><span class='hljl-t'> </span><span class='hljl-n'>𝑀_rand</span><span class='hljl-p'>)</span><span class='hljl-t'>
+        </span><span class='hljl-k'>else</span><span class='hljl-t'>
+            </span><span class='hljl-n'>no_of_new_idx</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>min</span><span class='hljl-p'>(</span><span class='hljl-nf'>length</span><span class='hljl-p'>(</span><span class='hljl-n'>selected_new_idx</span><span class='hljl-p'>),</span><span class='hljl-t'> </span><span class='hljl-n'>𝑀</span><span class='hljl-oB'>-</span><span class='hljl-nf'>length</span><span class='hljl-p'>(</span><span class='hljl-n'>support_vector_idx</span><span class='hljl-p'>))</span><span class='hljl-t'>
+        </span><span class='hljl-k'>end</span><span class='hljl-t'>
+
+        </span><span class='hljl-n'>no_of_old_idx</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>length</span><span class='hljl-p'>(</span><span class='hljl-n'>support_vector_idx</span><span class='hljl-p'>)</span><span class='hljl-t'>
+        </span><span class='hljl-n'>no_of_exceeds</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>no_of_new_idx</span><span class='hljl-t'> </span><span class='hljl-oB'>+</span><span class='hljl-t'> </span><span class='hljl-n'>no_of_old_idx</span><span class='hljl-t'> </span><span class='hljl-oB'>-</span><span class='hljl-t'> </span><span class='hljl-n'>𝑀</span><span class='hljl-t'>
+        </span><span class='hljl-k'>if</span><span class='hljl-t'> </span><span class='hljl-n'>no_of_exceeds</span><span class='hljl-t'> </span><span class='hljl-oB'>&gt;</span><span class='hljl-t'> </span><span class='hljl-ni'>0</span><span class='hljl-t'>
+            </span><span class='hljl-n'>abandoned_support_vector_idx</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>sorted_support_vector_idx</span><span class='hljl-p'>[</span><span class='hljl-k'>end</span><span class='hljl-oB'>+</span><span class='hljl-ni'>1</span><span class='hljl-oB'>-</span><span class='hljl-n'>no_of_exceeds</span><span class='hljl-oB'>:</span><span class='hljl-k'>end</span><span class='hljl-p'>]</span><span class='hljl-t'>
+            </span><span class='hljl-nf'>setdiff!</span><span class='hljl-p'>(</span><span class='hljl-n'>support_vector_idx</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>abandoned_support_vector_idx</span><span class='hljl-p'>)</span><span class='hljl-t'>
+            </span><span class='hljl-nf'>union!</span><span class='hljl-p'>(</span><span class='hljl-n'>alpha0_vector_idx</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>abandoned_support_vector_idx</span><span class='hljl-p'>)</span><span class='hljl-t'>
+        </span><span class='hljl-k'>end</span><span class='hljl-t'>
+        </span><span class='hljl-n'>selected_new_idx</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>selected_new_idx</span><span class='hljl-p'>[</span><span class='hljl-ni'>1</span><span class='hljl-oB'>:</span><span class='hljl-n'>no_of_new_idx</span><span class='hljl-p'>]</span><span class='hljl-t'>
+        </span><span class='hljl-nf'>union!</span><span class='hljl-p'>(</span><span class='hljl-n'>support_vector_idx</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>selected_new_idx</span><span class='hljl-p'>)</span><span class='hljl-t'>
+        </span><span class='hljl-nf'>setdiff!</span><span class='hljl-p'>(</span><span class='hljl-n'>alpha0_vector_idx</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>selected_new_idx</span><span class='hljl-p'>)</span><span class='hljl-t'>
+
+        </span><span class='hljl-n'>working_set_counter</span><span class='hljl-p'>[</span><span class='hljl-n'>support_vector_idx</span><span class='hljl-p'>]</span><span class='hljl-t'> </span><span class='hljl-oB'>.+=</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-t'>
+        </span><span class='hljl-n'>𝜶_subset</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝝈_subset</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>𝜶</span><span class='hljl-p'>[</span><span class='hljl-n'>support_vector_idx</span><span class='hljl-p'>],</span><span class='hljl-t'> </span><span class='hljl-n'>𝝈</span><span class='hljl-p'>[</span><span class='hljl-n'>support_vector_idx</span><span class='hljl-p'>]</span><span class='hljl-t'>
+        </span><span class='hljl-n'>𝒚_subset</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>K_subset</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>𝒚</span><span class='hljl-p'>[</span><span class='hljl-n'>support_vector_idx</span><span class='hljl-p'>],</span><span class='hljl-t'> </span><span class='hljl-n'>K</span><span class='hljl-p'>[</span><span class='hljl-n'>support_vector_idx</span><span class='hljl-p'>,</span><span class='hljl-n'>support_vector_idx</span><span class='hljl-p'>]</span><span class='hljl-t'>
+        </span><span class='hljl-k'>if</span><span class='hljl-t'> </span><span class='hljl-n'>usecpu</span><span class='hljl-t'>
+            </span><span class='hljl-n'>𝜶</span><span class='hljl-p'>[</span><span class='hljl-n'>support_vector_idx</span><span class='hljl-p'>]</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>optimise_working_set_CPU</span><span class='hljl-p'>(</span><span class='hljl-n'>𝜶_subset</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝝈_subset</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>K_subset</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝒚_subset</span><span class='hljl-p'>;</span><span class='hljl-t'> </span><span class='hljl-n'>𝐶</span><span class='hljl-oB'>=</span><span class='hljl-n'>𝐶</span><span class='hljl-p'>)</span><span class='hljl-t'>
+        </span><span class='hljl-k'>else</span><span class='hljl-t'>
+            </span><span class='hljl-n'>𝜶</span><span class='hljl-p'>[</span><span class='hljl-n'>support_vector_idx</span><span class='hljl-p'>]</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>optimise_working_set</span><span class='hljl-p'>(</span><span class='hljl-n'>𝜶_subset</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝝈_subset</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>K_subset</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝒚_subset</span><span class='hljl-p'>;</span><span class='hljl-t'> </span><span class='hljl-n'>𝐶</span><span class='hljl-oB'>=</span><span class='hljl-n'>𝐶</span><span class='hljl-p'>)</span><span class='hljl-t'>
+        </span><span class='hljl-k'>end</span><span class='hljl-t'>
+
+        </span><span class='hljl-n'>𝝈</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>K</span><span class='hljl-t'> </span><span class='hljl-oB'>*</span><span class='hljl-t'> </span><span class='hljl-p'>(</span><span class='hljl-n'>𝜶</span><span class='hljl-t'> </span><span class='hljl-oB'>.*</span><span class='hljl-t'> </span><span class='hljl-n'>𝒚</span><span class='hljl-p'>)</span><span class='hljl-t'>
+
+        </span><span class='hljl-k'>for</span><span class='hljl-t'> </span><span class='hljl-p'>(</span><span class='hljl-n'>i_index</span><span class='hljl-p'>,</span><span class='hljl-n'>i</span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-kp'>in</span><span class='hljl-t'> </span><span class='hljl-nf'>enumerate</span><span class='hljl-p'>(</span><span class='hljl-n'>support_vector_idx</span><span class='hljl-p'>)</span><span class='hljl-t'>
+            </span><span class='hljl-k'>if</span><span class='hljl-t'> </span><span class='hljl-n'>𝜶</span><span class='hljl-p'>[</span><span class='hljl-n'>i</span><span class='hljl-p'>]</span><span class='hljl-t'> </span><span class='hljl-oB'>==</span><span class='hljl-t'> </span><span class='hljl-ni'>0</span><span class='hljl-t'>
+                </span><span class='hljl-nf'>deleteat!</span><span class='hljl-p'>(</span><span class='hljl-n'>support_vector_idx</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>i_index</span><span class='hljl-p'>)</span><span class='hljl-t'>
+                </span><span class='hljl-nf'>push!</span><span class='hljl-p'>(</span><span class='hljl-n'>alpha0_vector_idx</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>i</span><span class='hljl-p'>)</span><span class='hljl-t'>
+            </span><span class='hljl-k'>end</span><span class='hljl-t'>
+        </span><span class='hljl-k'>end</span><span class='hljl-t'>
+
+        </span><span class='hljl-n'>selected_new_idx</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>select_new_points</span><span class='hljl-p'>(</span><span class='hljl-n'>𝜶</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝝈</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝒚</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝑀</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>support_vector_idx</span><span class='hljl-p'>;</span><span class='hljl-t'> </span><span class='hljl-n'>accuracy</span><span class='hljl-oB'>=</span><span class='hljl-n'>ACCURACY</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝐶</span><span class='hljl-oB'>=</span><span class='hljl-n'>𝐶</span><span class='hljl-p'>)</span><span class='hljl-t'>
+    </span><span class='hljl-k'>end</span><span class='hljl-t'>
+
+    </span><span class='hljl-n'>𝒚̂</span><span class='hljl-t'>      </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>sign</span><span class='hljl-oB'>.</span><span class='hljl-p'>(</span><span class='hljl-n'>𝝈</span><span class='hljl-p'>)</span><span class='hljl-t'>
+    </span><span class='hljl-n'>𝒚̂_test</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>sign</span><span class='hljl-oB'>.</span><span class='hljl-p'>(</span><span class='hljl-n'>K_test</span><span class='hljl-t'> </span><span class='hljl-oB'>*</span><span class='hljl-t'> </span><span class='hljl-p'>(</span><span class='hljl-n'>𝜶</span><span class='hljl-t'> </span><span class='hljl-oB'>.*</span><span class='hljl-t'> </span><span class='hljl-n'>𝒚</span><span class='hljl-p'>))</span><span class='hljl-t'>
+    </span><span class='hljl-n'>error_rate</span><span class='hljl-t'>      </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>count</span><span class='hljl-p'>(</span><span class='hljl-n'>𝒚̂</span><span class='hljl-t'> </span><span class='hljl-oB'>.!=</span><span class='hljl-t'> </span><span class='hljl-n'>𝒚</span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-oB'>/</span><span class='hljl-t'> </span><span class='hljl-n'>l</span><span class='hljl-t'> </span><span class='hljl-oB'>*</span><span class='hljl-t'> </span><span class='hljl-ni'>100</span><span class='hljl-t'>
+    </span><span class='hljl-n'>error_rate_test</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>count</span><span class='hljl-p'>(</span><span class='hljl-n'>𝒚̂_test</span><span class='hljl-t'> </span><span class='hljl-oB'>.!=</span><span class='hljl-t'> </span><span class='hljl-n'>𝒚_test</span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-oB'>/</span><span class='hljl-t'> </span><span class='hljl-n'>l_test</span><span class='hljl-t'> </span><span class='hljl-oB'>*</span><span class='hljl-t'> </span><span class='hljl-ni'>100</span><span class='hljl-t'>
+    </span><span class='hljl-k'>return</span><span class='hljl-t'> </span><span class='hljl-n'>𝜶</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>error_rate</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>error_rate_test</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-nf'>monitor_kkt_condition</span><span class='hljl-p'>(</span><span class='hljl-n'>𝜶</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝝈</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝒚</span><span class='hljl-p'>;</span><span class='hljl-t'> </span><span class='hljl-n'>𝐶</span><span class='hljl-oB'>=</span><span class='hljl-n'>𝐶</span><span class='hljl-p'>)</span><span class='hljl-t'>
+</span><span class='hljl-k'>end</span><span class='hljl-t'>
+
+</span><span class='hljl-k'>function</span><span class='hljl-t'> </span><span class='hljl-nf'>stochastic_decomposition</span><span class='hljl-p'>(</span><span class='hljl-n'>𝐶</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝑀</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>ACCURACY</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>l</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝒚</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>K</span><span class='hljl-p'>;</span><span class='hljl-t'> </span><span class='hljl-n'>usecpu</span><span class='hljl-oB'>=</span><span class='hljl-kc'>false</span><span class='hljl-p'>)</span><span class='hljl-t'>
+    </span><span class='hljl-n'>𝑀_safe</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>div</span><span class='hljl-p'>(</span><span class='hljl-n'>𝑀</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-ni'>4</span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-oB'>*</span><span class='hljl-t'> </span><span class='hljl-ni'>3</span><span class='hljl-t'>
+    </span><span class='hljl-n'>𝑀_rand</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>𝑀</span><span class='hljl-t'> </span><span class='hljl-oB'>-</span><span class='hljl-t'> </span><span class='hljl-n'>𝑀_safe</span><span class='hljl-t'>
+
+    </span><span class='hljl-n'>𝜶</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>zeros</span><span class='hljl-p'>(</span><span class='hljl-n'>Float32</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>l</span><span class='hljl-p'>)</span><span class='hljl-t'>
+    </span><span class='hljl-n'>𝝈</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>zeros</span><span class='hljl-p'>(</span><span class='hljl-n'>Float32</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>l</span><span class='hljl-p'>)</span><span class='hljl-t'>
+
+    </span><span class='hljl-n'>selected_new_idx</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-p'>[]</span><span class='hljl-t'>
+    </span><span class='hljl-n'>support_vector_idx</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>alpha0_vector_idx</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>collect</span><span class='hljl-p'>(</span><span class='hljl-ni'>1</span><span class='hljl-oB'>:</span><span class='hljl-n'>𝑀</span><span class='hljl-p'>),</span><span class='hljl-t'> </span><span class='hljl-nf'>collect</span><span class='hljl-p'>(</span><span class='hljl-n'>𝑀</span><span class='hljl-oB'>+</span><span class='hljl-ni'>1</span><span class='hljl-oB'>:</span><span class='hljl-n'>l</span><span class='hljl-p'>)</span><span class='hljl-t'>
+    </span><span class='hljl-n'>working_set_counter</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>zeros</span><span class='hljl-p'>(</span><span class='hljl-n'>Int32</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>l</span><span class='hljl-p'>)</span><span class='hljl-t'>
+
+    </span><span class='hljl-n'>batch_id</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-ni'>0</span><span class='hljl-t'>
+    </span><span class='hljl-k'>while</span><span class='hljl-t'> </span><span class='hljl-oB'>!</span><span class='hljl-nf'>monitor_kkt_condition</span><span class='hljl-p'>(</span><span class='hljl-n'>𝜶</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝝈</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝒚</span><span class='hljl-p'>;</span><span class='hljl-t'> </span><span class='hljl-n'>accuracy</span><span class='hljl-oB'>=</span><span class='hljl-n'>ACCURACY</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝐶</span><span class='hljl-oB'>=</span><span class='hljl-n'>𝐶</span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-oB'>&amp;&amp;</span><span class='hljl-t'> </span><span class='hljl-n'>batch_id</span><span class='hljl-t'> </span><span class='hljl-oB'>&lt;</span><span class='hljl-t'> </span><span class='hljl-n'>MAX_MINI_BATCH_ID</span><span class='hljl-t'>
+        </span><span class='hljl-n'>batch_id</span><span class='hljl-t'> </span><span class='hljl-oB'>+=</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-t'>
+
+        </span><span class='hljl-n'>current_working_set_counter</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>working_set_counter</span><span class='hljl-p'>[</span><span class='hljl-n'>support_vector_idx</span><span class='hljl-p'>]</span><span class='hljl-t'>
+        </span><span class='hljl-n'>sorted_support_vector_idx</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>support_vector_idx</span><span class='hljl-p'>[</span><span class='hljl-nf'>sortperm</span><span class='hljl-p'>(</span><span class='hljl-n'>current_working_set_counter</span><span class='hljl-p'>)]</span><span class='hljl-t'>
+
+        </span><span class='hljl-k'>if</span><span class='hljl-t'> </span><span class='hljl-nf'>length</span><span class='hljl-p'>(</span><span class='hljl-n'>support_vector_idx</span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-oB'>&gt;=</span><span class='hljl-t'> </span><span class='hljl-n'>𝑀_safe</span><span class='hljl-t'>
+            </span><span class='hljl-n'>no_of_new_idx</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>min</span><span class='hljl-p'>(</span><span class='hljl-nf'>length</span><span class='hljl-p'>(</span><span class='hljl-n'>selected_new_idx</span><span class='hljl-p'>),</span><span class='hljl-t'> </span><span class='hljl-n'>𝑀_rand</span><span class='hljl-p'>)</span><span class='hljl-t'>
+        </span><span class='hljl-k'>else</span><span class='hljl-t'>
+            </span><span class='hljl-n'>no_of_new_idx</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>min</span><span class='hljl-p'>(</span><span class='hljl-nf'>length</span><span class='hljl-p'>(</span><span class='hljl-n'>selected_new_idx</span><span class='hljl-p'>),</span><span class='hljl-t'> </span><span class='hljl-n'>𝑀</span><span class='hljl-oB'>-</span><span class='hljl-nf'>length</span><span class='hljl-p'>(</span><span class='hljl-n'>support_vector_idx</span><span class='hljl-p'>))</span><span class='hljl-t'>
+        </span><span class='hljl-k'>end</span><span class='hljl-t'>
+
+        </span><span class='hljl-n'>no_of_old_idx</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>length</span><span class='hljl-p'>(</span><span class='hljl-n'>support_vector_idx</span><span class='hljl-p'>)</span><span class='hljl-t'>
+        </span><span class='hljl-n'>no_of_exceeds</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>no_of_new_idx</span><span class='hljl-t'> </span><span class='hljl-oB'>+</span><span class='hljl-t'> </span><span class='hljl-n'>no_of_old_idx</span><span class='hljl-t'> </span><span class='hljl-oB'>-</span><span class='hljl-t'> </span><span class='hljl-n'>𝑀</span><span class='hljl-t'>
+        </span><span class='hljl-k'>if</span><span class='hljl-t'> </span><span class='hljl-n'>no_of_exceeds</span><span class='hljl-t'> </span><span class='hljl-oB'>&gt;</span><span class='hljl-t'> </span><span class='hljl-ni'>0</span><span class='hljl-t'>
+            </span><span class='hljl-n'>abandoned_support_vector_idx</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>sorted_support_vector_idx</span><span class='hljl-p'>[</span><span class='hljl-k'>end</span><span class='hljl-oB'>+</span><span class='hljl-ni'>1</span><span class='hljl-oB'>-</span><span class='hljl-n'>no_of_exceeds</span><span class='hljl-oB'>:</span><span class='hljl-k'>end</span><span class='hljl-p'>]</span><span class='hljl-t'>
+            </span><span class='hljl-nf'>setdiff!</span><span class='hljl-p'>(</span><span class='hljl-n'>support_vector_idx</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>abandoned_support_vector_idx</span><span class='hljl-p'>)</span><span class='hljl-t'>
+            </span><span class='hljl-nf'>union!</span><span class='hljl-p'>(</span><span class='hljl-n'>alpha0_vector_idx</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>abandoned_support_vector_idx</span><span class='hljl-p'>)</span><span class='hljl-t'>
+        </span><span class='hljl-k'>end</span><span class='hljl-t'>
+        </span><span class='hljl-n'>selected_new_idx</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>selected_new_idx</span><span class='hljl-p'>[</span><span class='hljl-ni'>1</span><span class='hljl-oB'>:</span><span class='hljl-n'>no_of_new_idx</span><span class='hljl-p'>]</span><span class='hljl-t'>
+        </span><span class='hljl-nf'>union!</span><span class='hljl-p'>(</span><span class='hljl-n'>support_vector_idx</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>selected_new_idx</span><span class='hljl-p'>)</span><span class='hljl-t'>
+        </span><span class='hljl-nf'>setdiff!</span><span class='hljl-p'>(</span><span class='hljl-n'>alpha0_vector_idx</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>selected_new_idx</span><span class='hljl-p'>)</span><span class='hljl-t'>
+
+        </span><span class='hljl-n'>working_set_counter</span><span class='hljl-p'>[</span><span class='hljl-n'>support_vector_idx</span><span class='hljl-p'>]</span><span class='hljl-t'> </span><span class='hljl-oB'>.+=</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-t'>
+        </span><span class='hljl-n'>𝜶_subset</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝝈_subset</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>𝜶</span><span class='hljl-p'>[</span><span class='hljl-n'>support_vector_idx</span><span class='hljl-p'>],</span><span class='hljl-t'> </span><span class='hljl-n'>𝝈</span><span class='hljl-p'>[</span><span class='hljl-n'>support_vector_idx</span><span class='hljl-p'>]</span><span class='hljl-t'>
+        </span><span class='hljl-n'>𝒚_subset</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>K_subset</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>𝒚</span><span class='hljl-p'>[</span><span class='hljl-n'>support_vector_idx</span><span class='hljl-p'>],</span><span class='hljl-t'> </span><span class='hljl-n'>K</span><span class='hljl-p'>[</span><span class='hljl-n'>support_vector_idx</span><span class='hljl-p'>,</span><span class='hljl-n'>support_vector_idx</span><span class='hljl-p'>]</span><span class='hljl-t'>
+        </span><span class='hljl-k'>if</span><span class='hljl-t'> </span><span class='hljl-n'>usecpu</span><span class='hljl-t'>
+            </span><span class='hljl-nf'>println</span><span class='hljl-p'>(</span><span class='hljl-s'>&quot;using CPU&quot;</span><span class='hljl-p'>)</span><span class='hljl-t'>
+            </span><span class='hljl-n'>𝜶</span><span class='hljl-p'>[</span><span class='hljl-n'>support_vector_idx</span><span class='hljl-p'>]</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>optimise_working_set_CPU</span><span class='hljl-p'>(</span><span class='hljl-n'>𝜶_subset</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝝈_subset</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>K_subset</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝒚_subset</span><span class='hljl-p'>;</span><span class='hljl-t'> </span><span class='hljl-n'>𝐶</span><span class='hljl-oB'>=</span><span class='hljl-n'>𝐶</span><span class='hljl-p'>)</span><span class='hljl-t'>
+        </span><span class='hljl-k'>else</span><span class='hljl-t'>
+            </span><span class='hljl-n'>𝜶</span><span class='hljl-p'>[</span><span class='hljl-n'>support_vector_idx</span><span class='hljl-p'>]</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>optimise_working_set</span><span class='hljl-p'>(</span><span class='hljl-n'>𝜶_subset</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝝈_subset</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>K_subset</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝒚_subset</span><span class='hljl-p'>;</span><span class='hljl-t'> </span><span class='hljl-n'>𝐶</span><span class='hljl-oB'>=</span><span class='hljl-n'>𝐶</span><span class='hljl-p'>)</span><span class='hljl-t'>
+        </span><span class='hljl-k'>end</span><span class='hljl-t'>
+        </span><span class='hljl-n'>𝝈</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>K</span><span class='hljl-t'> </span><span class='hljl-oB'>*</span><span class='hljl-t'> </span><span class='hljl-p'>(</span><span class='hljl-n'>𝜶</span><span class='hljl-t'> </span><span class='hljl-oB'>.*</span><span class='hljl-t'> </span><span class='hljl-n'>𝒚</span><span class='hljl-p'>)</span><span class='hljl-t'>
+
+        </span><span class='hljl-k'>for</span><span class='hljl-t'> </span><span class='hljl-p'>(</span><span class='hljl-n'>i_index</span><span class='hljl-p'>,</span><span class='hljl-n'>i</span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-kp'>in</span><span class='hljl-t'> </span><span class='hljl-nf'>enumerate</span><span class='hljl-p'>(</span><span class='hljl-n'>support_vector_idx</span><span class='hljl-p'>)</span><span class='hljl-t'>
+            </span><span class='hljl-k'>if</span><span class='hljl-t'> </span><span class='hljl-n'>𝜶</span><span class='hljl-p'>[</span><span class='hljl-n'>i</span><span class='hljl-p'>]</span><span class='hljl-t'> </span><span class='hljl-oB'>==</span><span class='hljl-t'> </span><span class='hljl-ni'>0</span><span class='hljl-t'>
+                </span><span class='hljl-nf'>deleteat!</span><span class='hljl-p'>(</span><span class='hljl-n'>support_vector_idx</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>i_index</span><span class='hljl-p'>)</span><span class='hljl-t'>
+                </span><span class='hljl-nf'>push!</span><span class='hljl-p'>(</span><span class='hljl-n'>alpha0_vector_idx</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>i</span><span class='hljl-p'>)</span><span class='hljl-t'>
+            </span><span class='hljl-k'>end</span><span class='hljl-t'>
+        </span><span class='hljl-k'>end</span><span class='hljl-t'>
+
+        </span><span class='hljl-n'>selected_new_idx</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>select_new_points</span><span class='hljl-p'>(</span><span class='hljl-n'>𝜶</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝝈</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝒚</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝑀</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>support_vector_idx</span><span class='hljl-p'>;</span><span class='hljl-t'> </span><span class='hljl-n'>accuracy</span><span class='hljl-oB'>=</span><span class='hljl-n'>ACCURACY</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝐶</span><span class='hljl-oB'>=</span><span class='hljl-n'>𝐶</span><span class='hljl-p'>)</span><span class='hljl-t'>
+    </span><span class='hljl-k'>end</span><span class='hljl-t'>
+
+    </span><span class='hljl-n'>𝒚̂</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>sign</span><span class='hljl-oB'>.</span><span class='hljl-p'>(</span><span class='hljl-n'>𝝈</span><span class='hljl-p'>)</span><span class='hljl-t'>
+    </span><span class='hljl-n'>error_rate</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>count</span><span class='hljl-p'>(</span><span class='hljl-n'>𝒚̂</span><span class='hljl-t'> </span><span class='hljl-oB'>.!=</span><span class='hljl-t'> </span><span class='hljl-n'>𝒚</span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-oB'>/</span><span class='hljl-t'> </span><span class='hljl-n'>l</span><span class='hljl-t'> </span><span class='hljl-oB'>*</span><span class='hljl-t'> </span><span class='hljl-ni'>100</span><span class='hljl-t'>
+    </span><span class='hljl-k'>return</span><span class='hljl-t'> </span><span class='hljl-n'>𝜶</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>error_rate</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-nf'>monitor_kkt_condition</span><span class='hljl-p'>(</span><span class='hljl-n'>𝜶</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝝈</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝒚</span><span class='hljl-p'>;</span><span class='hljl-t'> </span><span class='hljl-n'>accuracy</span><span class='hljl-oB'>=</span><span class='hljl-n'>ACCURACY</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝐶</span><span class='hljl-oB'>=</span><span class='hljl-n'>𝐶</span><span class='hljl-p'>)</span><span class='hljl-t'>
+</span><span class='hljl-k'>end</span>
+</pre>
+
+
+                <pre class="output">
+stochastic_decomposition &#40;generic function with 1 method&#41;
+</pre>
+
+
+                <h1>MNIST Training and Testing</h1>
+
+
+                <pre class='hljl'>
+<span class='hljl-cs'>##############################</span><span class='hljl-t'>
+</span><span class='hljl-cs'>## by Qin Yu, Apr 2019</span><span class='hljl-t'>
+</span><span class='hljl-cs'>## using Julia 1.1.0</span><span class='hljl-t'>
+</span><span class='hljl-cs'>##############################</span><span class='hljl-t'>
+
+</span><span class='hljl-cs'>#################### MNIST One-vs-One Multi-class ####################</span><span class='hljl-t'>
+</span><span class='hljl-k'>function</span><span class='hljl-t'> </span><span class='hljl-nf'>MNIST_train</span><span class='hljl-p'>(</span><span class='hljl-n'>L</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>L_test</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝑋s</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝒚s</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝐶</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝑀</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>ACCURACY</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>γ</span><span class='hljl-p'>;</span><span class='hljl-t'> </span><span class='hljl-n'>usecpu</span><span class='hljl-oB'>=</span><span class='hljl-kc'>false</span><span class='hljl-p'>)</span><span class='hljl-t'>
+    </span><span class='hljl-n'>time_K_spent</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>time_GPU_spent</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>time_total_spent</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-ni'>0</span><span class='hljl-t'>
+    </span><span class='hljl-n'>time_total_start</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>time</span><span class='hljl-p'>()</span><span class='hljl-t'>
+
+    </span><span class='hljl-n'>randomisation_list</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>Array</span><span class='hljl-p'>{</span><span class='hljl-n'>Int32</span><span class='hljl-p'>,</span><span class='hljl-ni'>1</span><span class='hljl-p'>}[]</span><span class='hljl-t'>
+    </span><span class='hljl-n'>𝜶_list</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>Array</span><span class='hljl-p'>{</span><span class='hljl-n'>Float32</span><span class='hljl-p'>,</span><span class='hljl-ni'>1</span><span class='hljl-p'>}[]</span><span class='hljl-t'>
+    </span><span class='hljl-n'>error_list</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>Float64</span><span class='hljl-p'>[]</span><span class='hljl-t'>
+    </span><span class='hljl-n'>error_list_test</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>Float64</span><span class='hljl-p'>[]</span><span class='hljl-t'>
+    </span><span class='hljl-n'>finished_list</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>Bool</span><span class='hljl-p'>[]</span><span class='hljl-t'>
+    </span><span class='hljl-n'>time_ivj_list</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>Float64</span><span class='hljl-p'>[]</span><span class='hljl-t'>
+
+    </span><span class='hljl-k'>for</span><span class='hljl-t'> </span><span class='hljl-n'>ci</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-oB'>:</span><span class='hljl-ni'>10</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>cj</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-oB'>:</span><span class='hljl-ni'>10</span><span class='hljl-t'>
+        </span><span class='hljl-n'>ci</span><span class='hljl-t'> </span><span class='hljl-oB'>&gt;=</span><span class='hljl-t'> </span><span class='hljl-n'>cj</span><span class='hljl-t'> </span><span class='hljl-oB'>&amp;&amp;</span><span class='hljl-t'> </span><span class='hljl-k'>continue</span><span class='hljl-t'>
+        </span><span class='hljl-nf'>print</span><span class='hljl-p'>(</span><span class='hljl-s'>&quot;</span><span class='hljl-si'>$</span><span class='hljl-p'>(</span><span class='hljl-n'>ci</span><span class='hljl-oB'>-</span><span class='hljl-ni'>1</span><span class='hljl-p'>)</span><span class='hljl-s'>-vs-</span><span class='hljl-si'>$</span><span class='hljl-p'>(</span><span class='hljl-n'>cj</span><span class='hljl-oB'>-</span><span class='hljl-ni'>1</span><span class='hljl-p'>)</span><span class='hljl-s'> - &quot;</span><span class='hljl-p'>)</span><span class='hljl-t'>
+
+        </span><span class='hljl-n'>time_K_start</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>time</span><span class='hljl-p'>()</span><span class='hljl-t'>
+        </span><span class='hljl-n'>l</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>L</span><span class='hljl-p'>[</span><span class='hljl-n'>ci</span><span class='hljl-p'>]</span><span class='hljl-t'> </span><span class='hljl-oB'>+</span><span class='hljl-t'> </span><span class='hljl-n'>L</span><span class='hljl-p'>[</span><span class='hljl-n'>cj</span><span class='hljl-p'>]</span><span class='hljl-t'>
+        </span><span class='hljl-n'>randomisation</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>randperm</span><span class='hljl-p'>(</span><span class='hljl-n'>l</span><span class='hljl-p'>)</span><span class='hljl-t'>
+        </span><span class='hljl-n'>𝒚</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>vcat</span><span class='hljl-p'>(</span><span class='hljl-nf'>ones</span><span class='hljl-p'>(</span><span class='hljl-n'>Int32</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-nf'>size</span><span class='hljl-p'>(</span><span class='hljl-n'>𝒚s</span><span class='hljl-p'>[</span><span class='hljl-n'>ci</span><span class='hljl-p'>])),</span><span class='hljl-t'> </span><span class='hljl-oB'>-</span><span class='hljl-nf'>ones</span><span class='hljl-p'>(</span><span class='hljl-n'>Int32</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-nf'>size</span><span class='hljl-p'>(</span><span class='hljl-n'>𝒚s</span><span class='hljl-p'>[</span><span class='hljl-n'>cj</span><span class='hljl-p'>])))[</span><span class='hljl-n'>randomisation</span><span class='hljl-p'>,</span><span class='hljl-oB'>:</span><span class='hljl-p'>]</span><span class='hljl-t'>
+        </span><span class='hljl-n'>𝑋</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>vcat</span><span class='hljl-p'>(</span><span class='hljl-n'>𝑋s</span><span class='hljl-p'>[</span><span class='hljl-n'>ci</span><span class='hljl-p'>],</span><span class='hljl-t'> </span><span class='hljl-n'>𝑋s</span><span class='hljl-p'>[</span><span class='hljl-n'>cj</span><span class='hljl-p'>])[</span><span class='hljl-n'>randomisation</span><span class='hljl-p'>,</span><span class='hljl-oB'>:</span><span class='hljl-p'>]</span><span class='hljl-t'>
+        </span><span class='hljl-n'>K</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>gaussian_kernel_matrix</span><span class='hljl-p'>(</span><span class='hljl-n'>𝑋</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>γ</span><span class='hljl-p'>)</span><span class='hljl-t'>
+        </span><span class='hljl-n'>time_K_spent</span><span class='hljl-t'> </span><span class='hljl-oB'>+=</span><span class='hljl-t'> </span><span class='hljl-nf'>time</span><span class='hljl-p'>()</span><span class='hljl-t'> </span><span class='hljl-oB'>-</span><span class='hljl-t'> </span><span class='hljl-n'>time_K_start</span><span class='hljl-t'>
+
+        </span><span class='hljl-cs'># l_test = L_test[ci] + L_test[cj]</span><span class='hljl-t'>
+        </span><span class='hljl-cs'># randomisation_test = randperm(l_test)</span><span class='hljl-t'>
+        </span><span class='hljl-cs'># 𝒚_test = vcat(ones(Int32, size(𝒚s_test[ci])), -ones(Int32, size(𝒚s_test[cj])))[randomisation_test,:]</span><span class='hljl-t'>
+        </span><span class='hljl-cs'># 𝑋_test = vcat(𝑋s_test[ci], 𝑋s_test[cj])[randomisation_test,:]</span><span class='hljl-t'>
+        </span><span class='hljl-cs'># K_test = gaussian_kernel_matrix(𝑋, 𝑋_test, γ)</span><span class='hljl-t'>
+
+        </span><span class='hljl-n'>time_GPU_start</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>time</span><span class='hljl-p'>()</span><span class='hljl-t'>
+        </span><span class='hljl-n'>𝜶</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>error_rate</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>finished</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>stochastic_decomposition</span><span class='hljl-p'>(</span><span class='hljl-n'>𝐶</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝑀</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>ACCURACY</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>l</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝒚</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>K</span><span class='hljl-p'>;</span><span class='hljl-t'> </span><span class='hljl-n'>usecpu</span><span class='hljl-oB'>=</span><span class='hljl-n'>usecpu</span><span class='hljl-p'>)</span><span class='hljl-t'>
+        </span><span class='hljl-cs'># 𝜶, error_rate, error_rate_test, finished = stochastic_decomposition(𝐶, 𝑀, l, 𝒚, K, l_test, 𝒚_test, K_test)</span><span class='hljl-t'>
+        </span><span class='hljl-n'>time_GPU_spent_this</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>time</span><span class='hljl-p'>()</span><span class='hljl-t'> </span><span class='hljl-oB'>-</span><span class='hljl-t'> </span><span class='hljl-n'>time_GPU_start</span><span class='hljl-t'>
+        </span><span class='hljl-nf'>push!</span><span class='hljl-p'>(</span><span class='hljl-n'>time_ivj_list</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>time_GPU_spent_this</span><span class='hljl-p'>)</span><span class='hljl-t'>
+        </span><span class='hljl-n'>time_GPU_spent</span><span class='hljl-t'> </span><span class='hljl-oB'>+=</span><span class='hljl-t'> </span><span class='hljl-n'>time_GPU_spent_this</span><span class='hljl-t'>
+
+        </span><span class='hljl-nf'>println</span><span class='hljl-p'>(</span><span class='hljl-s'>&quot;error rate = </span><span class='hljl-si'>$error_rate</span><span class='hljl-s'>% ; finished = </span><span class='hljl-si'>$finished</span><span class='hljl-s'> ; time = </span><span class='hljl-si'>$time_GPU_spent_this</span><span class='hljl-s'>&quot;</span><span class='hljl-p'>)</span><span class='hljl-t'>
+        </span><span class='hljl-cs'># println(&quot;error rate = $error_rate% ; test error rate = $error_rate_test% ; finished = $finished ; time = $time_GPU_spent_this&quot;)</span><span class='hljl-t'>
+
+        </span><span class='hljl-nf'>push!</span><span class='hljl-p'>(</span><span class='hljl-n'>randomisation_list</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>randomisation</span><span class='hljl-p'>)</span><span class='hljl-t'>
+        </span><span class='hljl-nf'>push!</span><span class='hljl-p'>(</span><span class='hljl-n'>𝜶_list</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝜶</span><span class='hljl-p'>)</span><span class='hljl-t'>
+        </span><span class='hljl-nf'>push!</span><span class='hljl-p'>(</span><span class='hljl-n'>error_list</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>error_rate</span><span class='hljl-p'>)</span><span class='hljl-t'>
+        </span><span class='hljl-cs'># push!(error_list_test, error_rate_test)</span><span class='hljl-t'>
+        </span><span class='hljl-nf'>push!</span><span class='hljl-p'>(</span><span class='hljl-n'>finished_list</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>finished</span><span class='hljl-p'>)</span><span class='hljl-t'>
+    </span><span class='hljl-k'>end</span><span class='hljl-t'>
+
+    </span><span class='hljl-n'>time_total_spent</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>time</span><span class='hljl-p'>()</span><span class='hljl-t'> </span><span class='hljl-oB'>-</span><span class='hljl-t'> </span><span class='hljl-n'>time_total_start</span><span class='hljl-t'>
+    </span><span class='hljl-k'>return</span><span class='hljl-t'> </span><span class='hljl-p'>[</span><span class='hljl-n'>time_K_spent</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>time_GPU_spent</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>time_total_spent</span><span class='hljl-p'>],</span><span class='hljl-t'> </span><span class='hljl-n'>randomisation_list</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝜶_list</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>error_list</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>error_list_test</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>finished_list</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>time_ivj_list</span><span class='hljl-t'>
+</span><span class='hljl-k'>end</span><span class='hljl-t'>
+
+</span><span class='hljl-k'>function</span><span class='hljl-t'> </span><span class='hljl-nf'>MNIST_test_slave</span><span class='hljl-p'>(</span><span class='hljl-n'>𝑋_ALL</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝒚_ALL</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝑋s</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝒚s</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝜶_list</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>randomisation_list</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>γ</span><span class='hljl-p'>)</span><span class='hljl-t'>
+    </span><span class='hljl-n'>i</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-ni'>0</span><span class='hljl-t'>
+    </span><span class='hljl-n'>𝒚̂_test_list</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>Array</span><span class='hljl-p'>{</span><span class='hljl-n'>Int</span><span class='hljl-p'>}[]</span><span class='hljl-t'>
+    </span><span class='hljl-k'>for</span><span class='hljl-t'> </span><span class='hljl-n'>ci</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-oB'>:</span><span class='hljl-ni'>10</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>cj</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-oB'>:</span><span class='hljl-ni'>10</span><span class='hljl-t'>
+        </span><span class='hljl-n'>ci</span><span class='hljl-t'> </span><span class='hljl-oB'>&gt;=</span><span class='hljl-t'> </span><span class='hljl-n'>cj</span><span class='hljl-t'> </span><span class='hljl-oB'>&amp;&amp;</span><span class='hljl-t'> </span><span class='hljl-k'>continue</span><span class='hljl-t'>
+        </span><span class='hljl-nf'>print</span><span class='hljl-p'>(</span><span class='hljl-s'>&quot;</span><span class='hljl-si'>$</span><span class='hljl-p'>(</span><span class='hljl-n'>ci</span><span class='hljl-oB'>-</span><span class='hljl-ni'>1</span><span class='hljl-p'>)</span><span class='hljl-s'>-vs-</span><span class='hljl-si'>$</span><span class='hljl-p'>(</span><span class='hljl-n'>cj</span><span class='hljl-oB'>-</span><span class='hljl-ni'>1</span><span class='hljl-p'>)</span><span class='hljl-s'> - &quot;</span><span class='hljl-p'>)</span><span class='hljl-t'>
+        </span><span class='hljl-n'>i</span><span class='hljl-t'> </span><span class='hljl-oB'>+=</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-t'>
+
+        </span><span class='hljl-n'>𝑋_test</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝒚_test</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>extract_all_test</span><span class='hljl-p'>(</span><span class='hljl-n'>𝑋_ALL</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝒚_ALL</span><span class='hljl-p'>)</span><span class='hljl-t'>
+        </span><span class='hljl-n'>K_test</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>gaussian_kernel_matrix</span><span class='hljl-p'>(</span><span class='hljl-nf'>vcat</span><span class='hljl-p'>(</span><span class='hljl-n'>𝑋s</span><span class='hljl-p'>[</span><span class='hljl-n'>ci</span><span class='hljl-p'>],</span><span class='hljl-t'> </span><span class='hljl-n'>𝑋s</span><span class='hljl-p'>[</span><span class='hljl-n'>cj</span><span class='hljl-p'>])[</span><span class='hljl-n'>randomisation_list</span><span class='hljl-p'>[</span><span class='hljl-n'>i</span><span class='hljl-p'>],</span><span class='hljl-oB'>:</span><span class='hljl-p'>],</span><span class='hljl-t'> </span><span class='hljl-n'>𝑋_test</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>γ</span><span class='hljl-p'>)</span><span class='hljl-t'>
+        </span><span class='hljl-n'>𝝈_test</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>K_test</span><span class='hljl-t'> </span><span class='hljl-oB'>*</span><span class='hljl-t'> </span><span class='hljl-p'>(</span><span class='hljl-n'>𝜶_list</span><span class='hljl-p'>[</span><span class='hljl-n'>i</span><span class='hljl-p'>]</span><span class='hljl-t'> </span><span class='hljl-oB'>.*</span><span class='hljl-t'> </span><span class='hljl-nf'>vcat</span><span class='hljl-p'>(</span><span class='hljl-nf'>ones</span><span class='hljl-p'>(</span><span class='hljl-n'>Int32</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-nf'>size</span><span class='hljl-p'>(</span><span class='hljl-n'>𝒚s</span><span class='hljl-p'>[</span><span class='hljl-n'>ci</span><span class='hljl-p'>])),</span><span class='hljl-t'> </span><span class='hljl-oB'>-</span><span class='hljl-nf'>ones</span><span class='hljl-p'>(</span><span class='hljl-n'>Int32</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-nf'>size</span><span class='hljl-p'>(</span><span class='hljl-n'>𝒚s</span><span class='hljl-p'>[</span><span class='hljl-n'>cj</span><span class='hljl-p'>])))[</span><span class='hljl-n'>randomisation_list</span><span class='hljl-p'>[</span><span class='hljl-n'>i</span><span class='hljl-p'>],</span><span class='hljl-oB'>:</span><span class='hljl-p'>])</span><span class='hljl-t'>
+        </span><span class='hljl-n'>𝒚̂_test</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-p'>(</span><span class='hljl-n'>y</span><span class='hljl-t'> </span><span class='hljl-oB'>-&gt;</span><span class='hljl-t'> </span><span class='hljl-n'>y</span><span class='hljl-t'> </span><span class='hljl-oB'>&gt;</span><span class='hljl-t'> </span><span class='hljl-ni'>0</span><span class='hljl-t'> </span><span class='hljl-oB'>?</span><span class='hljl-t'> </span><span class='hljl-n'>ci</span><span class='hljl-oB'>-</span><span class='hljl-ni'>1</span><span class='hljl-t'> </span><span class='hljl-oB'>:</span><span class='hljl-t'> </span><span class='hljl-n'>cj</span><span class='hljl-oB'>-</span><span class='hljl-ni'>1</span><span class='hljl-p'>)</span><span class='hljl-oB'>.</span><span class='hljl-p'>(</span><span class='hljl-n'>𝝈_test</span><span class='hljl-p'>)</span><span class='hljl-t'>
+
+        </span><span class='hljl-nf'>push!</span><span class='hljl-p'>(</span><span class='hljl-n'>𝒚̂_test_list</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝒚̂_test</span><span class='hljl-p'>)</span><span class='hljl-t'>
+    </span><span class='hljl-k'>end</span><span class='hljl-t'>
+    </span><span class='hljl-k'>return</span><span class='hljl-t'> </span><span class='hljl-n'>𝒚̂_test_list</span><span class='hljl-t'>
+</span><span class='hljl-k'>end</span><span class='hljl-t'>
+
+</span><span class='hljl-k'>function</span><span class='hljl-t'> </span><span class='hljl-nf'>MNIST_test</span><span class='hljl-p'>(</span><span class='hljl-n'>𝒚_test</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝒚̂_test_list</span><span class='hljl-p'>)</span><span class='hljl-t'>
+    </span><span class='hljl-n'>𝒚̂_test_matrix</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>hcat</span><span class='hljl-p'>(</span><span class='hljl-n'>𝒚̂_test_list</span><span class='hljl-oB'>...</span><span class='hljl-p'>)</span><span class='hljl-t'>
+    </span><span class='hljl-n'>𝒚̂_test</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>mapslices</span><span class='hljl-p'>(</span><span class='hljl-n'>mode</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝒚̂_test_matrix</span><span class='hljl-p'>;</span><span class='hljl-t'> </span><span class='hljl-n'>dims</span><span class='hljl-oB'>=</span><span class='hljl-ni'>2</span><span class='hljl-p'>)</span><span class='hljl-t'>
+    </span><span class='hljl-n'>error_rate_test</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>count</span><span class='hljl-p'>(</span><span class='hljl-n'>𝒚̂_test</span><span class='hljl-t'> </span><span class='hljl-oB'>.!=</span><span class='hljl-t'> </span><span class='hljl-n'>𝒚_test</span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-oB'>/</span><span class='hljl-t'> </span><span class='hljl-nf'>length</span><span class='hljl-p'>(</span><span class='hljl-n'>𝒚_test</span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-oB'>*</span><span class='hljl-t'> </span><span class='hljl-ni'>100</span><span class='hljl-t'>
+    </span><span class='hljl-n'>correct_rate_test</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-ni'>100</span><span class='hljl-t'> </span><span class='hljl-oB'>-</span><span class='hljl-t'> </span><span class='hljl-n'>error_rate_test</span><span class='hljl-t'>  </span><span class='hljl-cs'># First run: 99.1%</span><span class='hljl-t'>
+    </span><span class='hljl-k'>return</span><span class='hljl-t'> </span><span class='hljl-n'>𝒚̂_test</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>error_rate_test</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>correct_rate_test</span><span class='hljl-t'>
+</span><span class='hljl-k'>end</span><span class='hljl-t'>
+
+</span><span class='hljl-k'>function</span><span class='hljl-t'> </span><span class='hljl-nf'>run</span><span class='hljl-p'>(</span><span class='hljl-n'>𝐶</span><span class='hljl-oB'>::</span><span class='hljl-n'>Int32</span><span class='hljl-oB'>=</span><span class='hljl-nf'>Int32</span><span class='hljl-p'>(</span><span class='hljl-ni'>1</span><span class='hljl-p'>),</span><span class='hljl-t'>    </span><span class='hljl-cs'># Penalty</span><span class='hljl-t'>
+              </span><span class='hljl-n'>𝑀</span><span class='hljl-oB'>::</span><span class='hljl-n'>Int</span><span class='hljl-oB'>=</span><span class='hljl-ni'>512</span><span class='hljl-p'>,</span><span class='hljl-t'>    </span><span class='hljl-cs'># Max size of minibatch</span><span class='hljl-t'>
+              </span><span class='hljl-n'>ACCURACY</span><span class='hljl-oB'>=</span><span class='hljl-nfB'>1e-2</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-cs'># GPU accuracy = 0.01 * ACCURACY</span><span class='hljl-t'>
+              </span><span class='hljl-n'>γ</span><span class='hljl-oB'>=</span><span class='hljl-nfB'>0.015</span><span class='hljl-p'>;</span><span class='hljl-t'>       </span><span class='hljl-cs'># Gaussian kernel parameter</span><span class='hljl-t'>
+              </span><span class='hljl-n'>usecpu</span><span class='hljl-oB'>=</span><span class='hljl-kc'>false</span><span class='hljl-p'>)</span><span class='hljl-t'>
+    </span><span class='hljl-n'>𝑋_ALL</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝒚_ALL</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>MNIST</span><span class='hljl-oB'>.</span><span class='hljl-nf'>traindata</span><span class='hljl-p'>(</span><span class='hljl-n'>Float32</span><span class='hljl-p'>)</span><span class='hljl-t'>
+    </span><span class='hljl-n'>𝑋_ALL_test</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝒚_ALL_test</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>MNIST</span><span class='hljl-oB'>.</span><span class='hljl-nf'>testdata</span><span class='hljl-p'>(</span><span class='hljl-n'>Float32</span><span class='hljl-p'>)</span><span class='hljl-t'>
+    </span><span class='hljl-n'>L</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝑋s</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝒚s</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>extract_each_classes</span><span class='hljl-p'>(</span><span class='hljl-n'>𝑋_ALL</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝒚_ALL</span><span class='hljl-p'>)</span><span class='hljl-t'>
+    </span><span class='hljl-n'>L_test</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝑋s_test</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝒚s_test</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>extract_each_classes</span><span class='hljl-p'>(</span><span class='hljl-n'>𝑋_ALL_test</span><span class='hljl-p'>,</span><span class='hljl-t'>  </span><span class='hljl-n'>𝒚_ALL_test</span><span class='hljl-p'>)</span><span class='hljl-t'>
+
+    </span><span class='hljl-nd'>@time</span><span class='hljl-t'> </span><span class='hljl-n'>time_list</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>randomisation_list</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝜶_list</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>error_list</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>error_list_test</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>finished_list</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>time_ivj_list</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'>
+        </span><span class='hljl-nf'>MNIST_train</span><span class='hljl-p'>(</span><span class='hljl-n'>L</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>L_test</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝑋s</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝒚s</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝐶</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝑀</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>ACCURACY</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>γ</span><span class='hljl-p'>;</span><span class='hljl-t'> </span><span class='hljl-n'>usecpu</span><span class='hljl-oB'>=</span><span class='hljl-n'>usecpu</span><span class='hljl-p'>)</span><span class='hljl-t'>
+    </span><span class='hljl-nd'>@save</span><span class='hljl-t'> </span><span class='hljl-s'>&quot;one-vs-one.jld2&quot;</span><span class='hljl-t'> </span><span class='hljl-n'>time_list</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>randomisation_list</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝜶_list</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>error_list</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>error_list_test</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>finished_list</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>time_ivj_list</span><span class='hljl-t'>
+    </span><span class='hljl-nd'>@time</span><span class='hljl-t'> </span><span class='hljl-n'>𝒚̂_test_list</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>MNIST_test_slave</span><span class='hljl-p'>(</span><span class='hljl-n'>𝑋_ALL</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝒚_ALL</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝑋s</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝒚s</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝜶_list</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>randomisation_list</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>γ</span><span class='hljl-p'>)</span><span class='hljl-t'>
+    </span><span class='hljl-nd'>@time</span><span class='hljl-t'> </span><span class='hljl-n'>𝒚̂_test</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>error_rate_test</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>MNIST_test</span><span class='hljl-p'>(</span><span class='hljl-n'>𝒚_ALL</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>𝒚̂_test_list</span><span class='hljl-p'>)</span><span class='hljl-t'>
+    </span><span class='hljl-nf'>println</span><span class='hljl-p'>(</span><span class='hljl-n'>error_rate_test</span><span class='hljl-p'>)</span><span class='hljl-t'>
+</span><span class='hljl-k'>end</span>
+</pre>
+
+
+                <pre class="output">
+run &#40;generic function with 5 methods&#41;
+</pre>
+
+
+                <h1>Run SVM</h1>
+
+
+                <pre class='hljl'>
+<span class='hljl-nf'>run</span><span class='hljl-p'>()</span><span class='hljl-t'>             </span><span class='hljl-cs'># 1256.897736s ≈ 20.95min</span>
+</pre>
+
+
+                <pre class="output">
+0-vs-1 - error rate &#61; 0.007895775759968417&#37; ; finished &#61; true ; time &#61; 11.731913089752197
+0-vs-2 - error rate &#61; 0.042083999663328&#37; ; finished &#61; true ; time &#61; 12.422368049621582
+0-vs-3 - error rate &#61; 0.024888003982080638&#37; ; finished &#61; true ; time &#61; 10.846972942352295
+0-vs-4 - error rate &#61; 0.06799830004249893&#37; ; finished &#61; true ; time &#61; 7.246622085571289
+0-vs-5 - error rate &#61; 0.07052186177715092&#37; ; finished &#61; true ; time &#61; 18.025906801223755
+0-vs-6 - error rate &#61; 0.10978802466007939&#37; ; finished &#61; true ; time &#61; 10.650660037994385
+0-vs-7 - error rate &#61; 0.016409583196586804&#37; ; finished &#61; true ; time &#61; 7.11625599861145
+0-vs-8 - error rate &#61; 0.08493290300662477&#37; ; finished &#61; true ; time &#61; 11.790964126586914
+0-vs-9 - error rate &#61; 0.07580862533692723&#37; ; finished &#61; true ; time &#61; 7.729828834533691
+1-vs-2 - error rate &#61; 0.13385826771653542&#37; ; finished &#61; true ; time &#61; 16.983326196670532
+1-vs-3 - error rate &#61; 0.06991377301328362&#37; ; finished &#61; true ; time &#61; 11.7693190574646
+1-vs-4 - error rate &#61; 0.14303877940241577&#37; ; finished &#61; true ; time &#61; 8.491616010665894
+1-vs-5 - error rate &#61; 0.04932993504891885&#37; ; finished &#61; true ; time &#61; 11.43572211265564
+1-vs-6 - error rate &#61; 0.023696682464454978&#37; ; finished &#61; true ; time &#61; 22.854277849197388
+1-vs-7 - error rate &#61; 0.261397708925963&#37; ; finished &#61; true ; time &#61; 12.761433839797974
+1-vs-8 - error rate &#61; 0.1508774716112126&#37; ; finished &#61; true ; time &#61; 25.24915885925293
+1-vs-9 - error rate &#61; 0.11031439602868175&#37; ; finished &#61; true ; time &#61; 7.722901821136475
+2-vs-3 - error rate &#61; 0.2233435354454463&#37; ; finished &#61; true ; time &#61; 51.78821110725403
+2-vs-4 - error rate &#61; 0.11864406779661016&#37; ; finished &#61; true ; time &#61; 24.21775197982788
+2-vs-5 - error rate &#61; 0.043940592319184464&#37; ; finished &#61; true ; time &#61; 24.209162950515747
+2-vs-6 - error rate &#61; 0.0421017177500842&#37; ; finished &#61; true ; time &#61; 26.605338096618652
+2-vs-7 - error rate &#61; 0.29452671193651314&#37; ; finished &#61; true ; time &#61; 31.75123906135559
+2-vs-8 - error rate &#61; 0.20323482089931408&#37; ; finished &#61; true ; time &#61; 57.46496510505676
+2-vs-9 - error rate &#61; 0.07558578987150416&#37; ; finished &#61; true ; time &#61; 15.855940103530884
+3-vs-4 - error rate &#61; 0.05011275369581559&#37; ; finished &#61; true ; time &#61; 15.090398073196411
+3-vs-5 - error rate &#61; 0.3808864265927978&#37; ; finished &#61; true ; time &#61; 66.38876104354858
+3-vs-6 - error rate &#61; 0.008299443937256203&#37; ; finished &#61; true ; time &#61; 14.185173988342285
+3-vs-7 - error rate &#61; 0.18554372378186512&#37; ; finished &#61; true ; time &#61; 28.159248113632202
+3-vs-8 - error rate &#61; 0.35052578868302453&#37; ; finished &#61; true ; time &#61; 55.56105613708496
+3-vs-9 - error rate &#61; 0.25662251655629137&#37; ; finished &#61; true ; time &#61; 22.970326900482178
+4-vs-5 - error rate &#61; 0.03551451655864335&#37; ; finished &#61; true ; time &#61; 19.871274948120117
+4-vs-6 - error rate &#61; 0.13605442176870747&#37; ; finished &#61; true ; time &#61; 15.57249402999878
+4-vs-7 - error rate &#61; 0.21475179648137438&#37; ; finished &#61; true ; time &#61; 42.69997715950012
+4-vs-8 - error rate &#61; 0.09407337723424271&#37; ; finished &#61; true ; time &#61; 19.575289964675903
+4-vs-9 - error rate &#61; 0.5003816470189127&#37; ; finished &#61; true ; time &#61; 73.25518202781677
+5-vs-6 - error rate &#61; 0.17638239703677575&#37; ; finished &#61; true ; time &#61; 26.81020998954773
+5-vs-7 - error rate &#61; 0.06845798391237377&#37; ; finished &#61; true ; time &#61; 20.46792197227478
+5-vs-8 - error rate &#61; 0.17743080198722497&#37; ; finished &#61; true ; time &#61; 53.68216514587402
+5-vs-9 - error rate &#61; 0.12313104661389623&#37; ; finished &#61; true ; time &#61; 23.383502960205078
+6-vs-7 - error rate &#61; 0.008208158909956496&#37; ; finished &#61; true ; time &#61; 6.258177995681763
+6-vs-8 - error rate &#61; 0.05098139179199593&#37; ; finished &#61; true ; time &#61; 16.659406185150146
+6-vs-9 - error rate &#61; 0.02528018875874273&#37; ; finished &#61; true ; time &#61; 7.46078896522522
+7-vs-8 - error rate &#61; 0.115549686365137&#37; ; finished &#61; true ; time &#61; 18.93709897994995
+7-vs-9 - error rate &#61; 0.4830522351400033&#37; ; finished &#61; true ; time &#61; 76.98206496238708
+8-vs-9 - error rate &#61; 0.1440677966101695&#37; ; finished &#61; true ; time &#61; 44.56295299530029
+Total training time 1278.997176 seconds &#40;19.93 M allocations: 159.586 GiB, 1.11&#37; gc time&#41;
+<!-- 1502.250173 seconds &#40;1.34 M allocations: 765.413 GiB, 33.22&#37; gc time&#41; -->
+  <!-- 14.638210 seconds &#40;4.16 M allocations: 244.194 MiB, 0.55&#37; gc time&#41; -->
+Final error rate 0.895&#37;
+</pre>
+
+
+
+
+                <HR />
+                <div class="footer">
+                    <p>
+                        Published from <a href="MNISTStochasticSVM.jmd">MNISTStochasticSVM.jmd</a> using
+                        <a href="http://github.com/mpastell/Weave.jl">Weave.jl</a>
+                        on 2019-04-15.
+                        <p>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</BODY>
+
+</HTML>
